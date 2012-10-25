@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="InstallApkActivity" default="create-signed-build">
+	<property name="source.package" value="com.ximad.custom" />
+	<property name="banner.resource.filename" value="banner.jpg" />
+	<property name="icon.resource.filename" value="ic_launcher.png" />
+	<property name="resource.directory" value="./res/drawable/" />
+	<property name="resource.directory.hdpi" value="./res/drawable-hdpi/" />
+	<property name="resource.directory.mdpi" value="./res/drawable-mdpi/" />
+	<property name="resource.directory.ldpi" value="./res/drawable-ldpi/" />
+	<property name="resource.directory.xhdpi" value="./res/drawable-xhdpi/" />
+	<property name="banner.resource.path" value="${resource.directory}${banner.resource.filename}" />
+	<property name="banner.resource.path.big" value="${resource.directory.hdpi}${banner.resource.filename}" />
+	<property name="source.assets.package" value="./assets/applications/package.apk" />
+
+	<property name="manifest.path" value="./AndroidManifest.xml" />
+	<property name="values.string.path" value="./res/values/strings.xml" />
+	<property name="project.src.path" value="./src" />
+	<!--   <property file="local.properties" /> -->
+
+	<!-- quick check on sdk.dir -->
+	<fail message="sdk.dir is missing." unless="sdk.dir" />
+
+	<import file="custom_rules.xml" optional="true" />
+
+	<!-- version-tag: 1 -->
+	<import file="${sdk.dir}/tools/ant/build.xml" />
+	<target name="initialise-project-properties">
+		<!-- The project.properties file is created and updated by the 'android'
+	         tool, as well as ADT.
+
+	         This contains project specific properties such as project target, and library
+	         dependencies. Lower level build properties are stored in ant.properties
+	         (or in .classpath for Eclipse projects).
+
+	         This file is an integral part of the build system for your
+	         application and should be checked into Version Control Systems. -->
+		<loadproperties srcfile="project.properties" />
+
+	</target>
+
+	<target name="copy-to-temp" depends="clean-temp">
+		<copy todir=".">
+			<fileset dir="${project.path}">
+				<exclude name="bin" />
+			</fileset>
+		</copy>
+	</target>
+
+	<target name="clean-temp">
+		<delete dir="." />
+		<mkdir dir="." />
+	</target>
+
+
+	<target name="create-signed-build-with-install" depends="create-signed-build,install,run-main-ativity" />
+	<target name="create-signed-build" depends="create-build,copy-build-signed" />
+	<target name="create-unsigned-build" depends="create-build,copy-build-unsigned" />
+
+	<target name="create-build" depends="copy-to-temp,initialise-project-properties,precompile,clean,release" />
+
+
+	<target name="precompile" depends="copy-to-resource,replace-package,replace-labels">
+
+	</target>
+
+	<target name="replace-package">
+		<replace file="${manifest.path}" encoding="UTF-8">
+			<replacefilter token="${source.package}" value="${build.package}" />
+		</replace>
+		<replace dir="${project.src.path}" encoding="UTF-8">
+			<replacefilter token="${source.package}" value="${build.package}" />
+		</replace>
+	</target>
+
+	<target name="replace-labels">
+		<replace file="${values.string.path}" encoding="UTF-8">
+			<replacefilter token="%%BUILD_LABEL%%" value="${build.label}" />
+			<replacefilter token="%%USER_ID%%" value="${banner.user_id}" />
+			<replacefilter token="%%EXTERNAL_LABEL%%" value="${apk.label}" />
+		</replace>
+
+
+	</target>
+
+	<target name="copy-build-unsigned">
+		<echo message="Copy ${out.packaged.file}" />
+		<echo message="Copy ${out.final.file}" />
+
+		<copyfile dest="${build.path}" src="${out.packaged.file}" />
+	</target>
+
+	<target name="copy-build-signed">
+		<echo message="Copy ${out.final.file}" />
+		<copyfile dest="${build.path}" src="${out.final.file}" />
+	</target>
+
+
+
+	<target name="copy-to-resource" depends="clean-resource">
+		<copy tofile="${source.assets.package}" file="${apk.path}" />
+
+		<copy tofile="${resource.directory}${icon.resource.filename}" file="${build.icon.160}" failonerror="false" />
+		<copy tofile="${resource.directory.mdpi}${icon.resource.filename}" file="${build.icon.160}" failonerror="false" />
+		<copy tofile="${resource.directory.hdpi}${icon.resource.filename}" file="${build.icon.240}" failonerror="false" />
+		<copy tofile="${resource.directory.ldpi}${icon.resource.filename}" file="${build.icon.120}" failonerror="false" />
+		<copy tofile="${resource.directory.xhdpi}${icon.resource.filename}" file="${build.icon.320}" failonerror="false" />
+
+	</target>
+
+	<target name="clean-resource">
+		<delete file="${source.assets.package}">
+		</delete>
+		<delete>
+			<fileset dir="${resource.directory}">
+				<include name="${banner.resource.filename}" />
+				<include name="${icon.resource.filename}" />
+			</fileset>
+			<fileset dir="${resource.directory.hdpi}">
+				<include name="${banner.resource.filename}" />
+				<include name="${icon.resource.filename}" />
+			</fileset>
+
+			<fileset dir="${resource.directory.mdpi}">
+				<include name="${icon.resource.filename}" />
+			</fileset>
+			<fileset dir="${resource.directory.ldpi}">
+				<include name="${icon.resource.filename}" />
+			</fileset>
+			<fileset dir="${resource.directory.xhdpi}">
+				<include name="${icon.resource.filename}" />
+			</fileset>
+		</delete>
+
+
+
+
+	</target>
+
+
+	<target name="run-main-ativity">
+		<echo>Running Activity ...</echo>
+		<exec executable="${adb}" failonerror="true">
+			<arg line="${adb.device.arg}" />
+			<arg value="shell" />
+			<arg value="am" />
+			<arg value="start" />
+			<arg value="-n" />
+			<arg value="${manifest.package}/com.ximad.install.MainActivity" />
+			<arg value="-a" />
+			<arg value="android.intent.action.MAIN" />
+			<arg value="-c" />
+			<arg value="android.intent.category.LAUNCHER" />
+		</exec>
+	</target>
+
+
+</project>
+

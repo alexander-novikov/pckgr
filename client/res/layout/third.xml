@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/banner_content"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:layout_centerInParent="true"
+	android:layout_margin="@dimen/frame_margin"
+	android:background="@drawable/background_frame"
+	android:orientation="vertical" >
+
+	<LinearLayout
+	    android:id="@+id/banner_btns"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_centerHorizontal="true"
+	    android:layout_centerInParent="true"
+	    android:layout_gravity="center"
+	    android:layout_marginBottom="@dimen/banner_margin"
+	    android:layout_marginLeft="@dimen/banner_margin"
+	    android:layout_marginRight="@dimen/banner_margin"
+	    android:orientation="vertical" >
+			<com.smaato.soma.BannerView
+			android:id="@+id/BannerViewSecond_3"
+			android:layout_width="fill_parent"
+			android:layout_height="50dip"
+/>
+
+		<ImageButton
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/banner_next_button_third"
+	android:layout_gravity="center"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:enabled="false"
+	
+	android:contentDescription="@string/btn_get_pacakge"
+	android:src="@drawable/bt_next" />
+		<com.smaato.soma.BannerView
+			android:id="@+id/BannerViewFirst_3"
+			android:layout_width="fill_parent"
+			android:layout_height="50dip"
+/>
+
+	</LinearLayout>
+	
+	
+	
+	
+	<TextView
+	    android:id="@+id/textView3"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_above="@+id/banner_btns"
+	    android:layout_centerHorizontal="true"
+	    android:text="Last step"
+	    android:textSize="24px" />
+
+	<TextView
+	    android:id="@+id/textView13"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_above="@+id/textView3"
+	    android:layout_centerHorizontal="true"
+	    android:text="Please wait 2-3 sec until next step will be available" 
+	    android:textSize="17px"
+	    />
+
+</RelativeLayout>

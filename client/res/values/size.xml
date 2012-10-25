@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+	<dimen name="frame_margin">5dip</dimen>
+	<dimen name="title_padding">5dip</dimen>
+	<dimen name="download_padding">5dip</dimen>
+	<dimen name="banner_margin">5dip</dimen>
+	<dimen name="banner_frame_padding">10px</dimen>
+	<dimen name="banner_width">480px</dimen>
+	<dimen name="banner_height">560px</dimen>
+
+
+</resources>

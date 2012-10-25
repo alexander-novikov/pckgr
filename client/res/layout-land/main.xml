@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/banner_content"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:layout_centerInParent="true"
+	android:layout_margin="@dimen/frame_margin"
+	android:background="@drawable/background_frame"
+	android:orientation="vertical" >
+<RelativeLayout
+		android:id="@+id/frame_container"
+		android:layout_width="wrap_content"
+		android:layout_height="fill_parent"
+		android:layout_centerInParent="true"
+		android:layout_marginRight="200dip"
+		android:layout_marginTop="@dimen/banner_margin"
+		android:layout_marginLeft="@dimen/banner_margin"
+		android:layout_marginBottom="@dimen/banner_margin"
+		>
+
+		<include layout="@layout/main_banner" />
+
+			</RelativeLayout>
+		<LinearLayout
+			android:id="@+id/banner_btns"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_centerVertical="true"
+			android:layout_gravity="center"
+			android:layout_marginBottom="@dimen/banner_margin"
+			android:layout_marginRight="@dimen/banner_margin"
+			android:layout_alignParentRight="true"
+			android:layout_marginLeft="-200dip"
+			android:layout_toRightOf="@id/frame_container"
+			android:orientation="vertical" >
+
+			<TextView
+				android:id="@+id/banner_hint_text"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_gravity="center"
+				android:gravity="center"
+				android:text="@string/text_hint_download"
+				android:textColor="@color/download_color" />
+
+			<include
+				android:layout_gravity="center"
+				layout="@layout/button_package" />
+		</LinearLayout>
+
+</RelativeLayout>

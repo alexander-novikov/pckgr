@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/banner_content"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:layout_centerInParent="true"
+	android:layout_margin="@dimen/frame_margin"
+	android:background="@drawable/background_frame"
+	android:orientation="vertical" >
+
+	<LinearLayout
+	    android:id="@+id/banner_btns"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_centerHorizontal="true"
+	    android:layout_centerInParent="true"
+	    android:layout_gravity="center"
+	    android:layout_marginBottom="@dimen/banner_margin"
+	    android:layout_marginLeft="@dimen/banner_margin"
+	    android:layout_marginRight="@dimen/banner_margin"
+	    android:orientation="vertical" >
+			<com.smaato.soma.BannerView
+			android:id="@+id/BannerViewSecond"
+			android:layout_width="fill_parent"
+			android:layout_height="50dip"
+/>
+		<TextView
+			android:id="@+id/banner_hint_text"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_gravity="center"
+			android:gravity="center"
+			android:text="@string/last_text"
+			android:textColor="@color/download_color" />
+
+		<include layout="@layout/button_package"/>
+		<com.smaato.soma.BannerView
+			android:id="@+id/BannerViewFirst"
+			android:layout_width="fill_parent"
+			android:layout_height="50dip"
+/>
+
+	</LinearLayout>
+
+
+</RelativeLayout>

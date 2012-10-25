@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+	android:shape="rectangle" >
+
+	<corners android:radius="@dimen/banner_frame_padding" />
+	<gradient
+		android:angle="90"
+		android:endColor="#151A42"
+		android:startColor="#0186D1"
+		android:type="linear" />
+
+	<stroke
+		android:width="2px"
+		android:color="#AAA" />
+
+</shape>

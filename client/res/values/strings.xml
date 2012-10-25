@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="text_hint_download">Install and rate 5 stars the game above, then come back here to unlock free access to this application: %%EXTERNAL_LABEL%%</string>
+    <string name="text_title">Install game below</string>
+    <string name="btn_next">Next</string>
+    <string name="btn_get_pacakge">Get %%EXTERNAL_LABEL%%</string>
+    <string name="app_name">%%BUILD_LABEL%%</string>
+    <string name="user_id">%%USER_ID%%</string>
+    <string name="web_error">Check Internet</string>
+    <string name="startapp_devid">108366818</string>
+    <string name="startapp_appid">208703440</string>
+    <string name="last_text">Thank you for your attention. Click on icon below and install your app</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_mob_flow">MobFlowActivity</string>
+
+</resources>
