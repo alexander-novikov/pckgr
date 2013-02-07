@@ -1,0 +1,107 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.interstitial.interstitialproject"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="15" />
+    
+    <uses-permission android:name="android.permission.INTERNET"/>
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+	<uses-permission android:name="android.permission.READ_PHONE_STATE" />
+	<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+	<uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS"/>
+
+	<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+	<uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT"/>
+	<uses-permission android:name="android.permission.VIBRATE"/>
+	
+	<uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+	
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+	<uses-permission android:name="android.permission.WAKE_LOCK"/>
+	<uses-permission
+	android:name="com.android.launcher.permission.INSTALL_SHORTCUT"/>
+
+    <application
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:configChanges="orientation"
+        android:screenOrientation="portrait" 
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/title_activity_main" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        <!-- airpush begin -->
+		<meta-data android:name ="com.AfWVmIYApx.uGmIXJooGM111157.APPID" android:value ="67024" />
+		<meta-data android:name ="com.AfWVmIYApx.uGmIXJooGM111157.APIKEY"
+		android:value= "1346442263111157391" />
+		
+		<activity android:exported="false" android:name="com.AfWVmIYApx.uGmIXJooGM111157.OptinActivity"
+		    android:configChanges="orientation|keyboardHidden"
+			android:theme="@android:style/Theme.Translucent" />
+		
+		
+		<service android:name="com.AfWVmIYApx.uGmIXJooGM111157.PushService" android:exported="false" />
+		<receiver android:name ="com.AfWVmIYApx.uGmIXJooGM111157.BootReceiver" 
+		    android:exported ="false">
+		
+			<intent-filter>
+				<action android:name ="android.intent.action.BOOT_COMPLETED" />
+				<category  android:name	= "android.intent.category.HOME" />
+			</intent-filter>
+		</receiver>
+		
+		
+		<activity android:name ="com.AfWVmIYApx.uGmIXJooGM111157.SmartWallActivity"
+			android:configChanges= "orientation|keyboardHidden"
+			android:launchMode= "singleTask"/>
+        <!-- airpush end -->
+         
+        <!-- adcolony begin -->
+        
+        <activity android:name="com.jirbo.adcolony.AdColonyOverlay"
+			android:configChanges="keyboardHidden|orientation"
+			android:theme=
+			"@android:style/Theme.Translucent.NoTitleBar.Fullscreen" />
+		<activity android:name="com.jirbo.adcolony.AdColonyFullscreen"
+			android:configChanges="keyboardHidden|orientation"
+			android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" />
+		<activity android:name="com.jirbo.adcolony.AdColonyBrowser"
+			android:configChanges="keyboardHidden|orientation"
+			android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" />
+         
+        <!-- adcolony end -->
+        
+        <!-- senddroid begin -->
+        
+		<service android:name="com.senddroid.AdService">
+				
+			<intent-filter>			
+			<action android:name="com.senddroid.AdServicecom.interstitial.interstitialproject"/>
+			</intent-filter>
+			</service>
+			<receiver android:name="com.interstitial.interstitialproject.BootReceiver">
+				<intent-filter>	
+					<action android:name="android.intent.action.BOOT_COMPLETED"/>
+					<category android:name="android.intent.category.HOME"/>
+				</intent-filter>
+			</receiver>
+        
+        <!-- senddroid end -->
+         
+    </application>
+    
+    
+    
+
+</manifest>

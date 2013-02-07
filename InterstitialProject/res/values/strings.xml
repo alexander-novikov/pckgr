@@ -1,0 +1,8 @@
+<resources>
+	<string name="button_text">Next Step</string>
+    <string name="app_name">Installer</string>
+    <string name="hello_world">Installer</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_main">Installer</string>
+	<string name="title_main">Please complete all steps for installing your app</string>
+</resources>
