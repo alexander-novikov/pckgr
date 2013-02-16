@@ -65,10 +65,10 @@
 
 	<target name="replace-package">
 		<replace file="${manifest.path}" encoding="UTF-8">
-			<replacefilter token="${source.package}" value="${custom.package}" />
+			<replacefilter token="${source.package}" value="${build.package}" />
 		</replace>
 		<replace dir="${project.src.path}" encoding="UTF-8">
-			<replacefilter token="${source.package}" value="${custom.package}" />
+			<replacefilter token="${source.package}" value="${build.package}" />
 		</replace>
 	</target>
 

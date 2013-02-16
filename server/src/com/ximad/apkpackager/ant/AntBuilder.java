@@ -50,7 +50,7 @@ public abstract class AntBuilder {
 		PrintStream printStream = new PrintStream(out);
 
 		consoleLogger.setErrorPrintStream(printStream);
-		consoleLogger.setOutputPrintStream(printStream);
+		consoleLogger.setOutputPrintStream(System.out);
 
 		consoleLogger.setMessageOutputLevel(Project.MSG_INFO);
 

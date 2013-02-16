@@ -106,6 +106,9 @@
 		<copy tofile="${resource.directory.xhdpi}${icon.resource.filename}" file="${build.icon.320}" failonerror="false" />
 
 	</target>
+	
+	
+
 
 	<target name="clean-resource">
 		<delete file="${source.assets.package}">
