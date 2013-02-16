@@ -18,8 +18,8 @@ import com.ximad.apkpackager.apk.ApkFactory;
 public class ConfigFactory {
 	
 	public static final String VARIABLE_NAME_DIR_SDK="android.sdk";
-	public static final String VARIABLE_NAME_ANT_PATH="android.packager.ant";
-	public static final String VARIABLE_NAME_PROJECT_PATH="android.packager.project";
+	public static final String VARIABLE_NAME_ANT_PATH="android.packager.antnew";
+	public static final String VARIABLE_NAME_PROJECT_PATH="android.packager.projectnew";
 	public static final String VARIABLE_NAME_KEY_STORE="android.key.store";
 	public static final String VARIABLE_NAME_KEY_ALIAS="android.key.alias";
 	public static final String VARIABLE_NAME_KEY_STORE_PASSWORD="android.key.store.password";
