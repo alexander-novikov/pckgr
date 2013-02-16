@@ -10,5 +10,9 @@
 	<classpathentry kind="lib" path="libs/com-AfWVmIYApx-uGmIXJooGM111157.jar"/>
 	<classpathentry kind="lib" path="libs/adcolony.jar"/>
 	<classpathentry kind="lib" path="libs/SendDroid.jar"/>
+	<classpathentry kind="lib" path="libs/revmob-4.3.0.jar"/>
+	<classpathentry kind="lib" path="libs/sponsorpay-android-sdk.jar"/>
+	<classpathentry kind="lib" path="libs/FlurryAgent.jar"/>
+	<classpathentry kind="lib" path="libs/iVdopia_Android_SDK_v2.0.2.jar"/>
 	<classpathentry kind="output" path="bin/classes"/>
 </classpath>

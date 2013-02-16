@@ -9,6 +9,9 @@ import java.util.List;
 import java.util.Timer;
 import java.util.TimerTask;
 import java.util.concurrent.ExecutionException;
+import java.util.regex.MatchResult;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import android.os.Bundle;
 import android.os.Handler;
@@ -28,6 +31,7 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.flurry.android.FlurryAgent;
 import com.interstitial.interstitialproject.dao.Offer;
 import com.interstitial.interstitialproject.dao.SdkNetwork;
 import com.interstitial.interstitialproject.utils.HtmlHelper;
@@ -37,9 +41,13 @@ import com.interstitial.interstitialproject.utils.PhoneHelper;
 import com.interstitial.interstitialproject.utils.SdkCallHelper;
 import com.interstitial.interstitialproject.utils.URLHelper;
 import com.jirbo.adcolony.AdColony;
+import com.sponsorpay.sdk.android.SponsorPay;
+import com.sponsorpay.sdk.android.publisher.SponsorPayPublisher;
+import com.vdopia.client.android.VDO;
 
 public class MainActivity extends Activity {
 	
+
 	/** Является ли internal-маркап первым по приоритету (true/false)*/
 	private boolean isInternalFirst;
 	
@@ -82,8 +90,14 @@ public class MainActivity extends Activity {
         PhoneHelper.setContext(this);
         doFirstRun();
         
+        String securityToken = "b1d5a1d67459b708d8c3c39e405ed620";
+		String overridingAppId = "9280";
+		String userId = "intesrtitial";
+		
+		SponsorPay.start(overridingAppId, userId, securityToken, getApplicationContext());
+        
         PhoneHelper.checkConnection();
-      //  titleText  = (TextView) findViewById(R.id.titleText);
+//  	  titleText  = (TextView) findViewById(R.id.titleText);
 //        nextButton = (Button) findViewById(R.id.nextButton);
 //        progressBar = (ProgressBar) findViewById(R.id.progressBar);
         
@@ -112,6 +126,12 @@ public class MainActivity extends Activity {
 			public void onPageFinished(WebView view, String url) {
 				if (URLHelper.checkURL(url)){
 					
+					Matcher matcher = Pattern.compile("&stepnumber=(.*?)&").matcher(url);
+					while (matcher.find()){
+						MatchResult result = matcher.toMatchResult();
+						stepNumber = Integer.parseInt(result.group(1));
+
+					}
 					URLHelper helper = new URLHelper();
 					helper.execute(stepNumber);
 					
@@ -119,10 +139,8 @@ public class MainActivity extends Activity {
 					try {
 						html = helper.get();
 					} catch (InterruptedException e) {
-						// TODO Auto-generated catch block
 						e.printStackTrace();
 					} catch (ExecutionException e) {
-						// TODO Auto-generated catch block
 						e.printStackTrace();
 					}
 					String json = HtmlHelper.extractJson(html);
@@ -132,8 +150,6 @@ public class MainActivity extends Activity {
 					Log.d("Interstitial", json);
 					Log.d("Interstitial", markup);
 					
-					titleText.setText(JsonHelper.getTitle(json));
-			
 					
 					sdkNetworks = JsonHelper.getSdkList(json);
 					if (sdkNetworks.size() != 0)
@@ -144,7 +160,14 @@ public class MainActivity extends Activity {
 					isLastStep = JsonHelper.checkLastStep(json);
 					
 					if (isLastStep){
-						nextButton.setText("Install Your App");
+						try {
+							startActivityForResult(SponsorPayPublisher.getIntentForUnlockOfferWallActivity(
+									getApplicationContext(), "TEST", "Application"),
+									SponsorPayPublisher.DEFAULT_UNLOCK_OFFERWALL_REQUEST_CODE);
+						} catch (RuntimeException ex) {
+							ex.printStackTrace();
+						
+						}
 					}
 					
 					List<Offer> offers = JsonHelper.getOffers(json);
@@ -190,8 +213,8 @@ public class MainActivity extends Activity {
         myWebView.setWebViewClient(c);
         myWebView.getSettings().setLoadWithOverviewMode(true);
         myWebView.getSettings().setUseWideViewPort(false);
-//        String url = URLHelper.getURLById(stepNumber,URLHelper.ACTION_GET_INSTALL);
-        String url = "http://31.130.202.176/html/";
+        String url = URLHelper.getURLById(stepNumber,URLHelper.ACTION_GET_INSTALL);
+//        String url = "http://31.130.202.176/html/";
         myWebView.loadUrl(url);
         
 //        nextButton.setOnClickListener(new OnClickListener() {
@@ -253,6 +276,20 @@ public class MainActivity extends Activity {
 		
 	}
 
+	@Override
+	protected void onStart() {
+		FlurryAgent.onStartSession(this, "V5QYFPPWPNWTQCZC5PBN");
+	    FlurryAgent.initializeAds(this);
+	    VDO.initialize("d8f54e64e2bda082b8c4b6dab91843c5", this);
+	    super.onStart();
+	}
+
+	@Override
+	protected void onStop()	{
+		super.onStop();		
+		FlurryAgent.onEndSession(this);
+	}
+	
     private void unlockButton(int delay){
     	final TimerTask task = new TimerTask() {
     		public void run() {
@@ -261,7 +298,6 @@ public class MainActivity extends Activity {
     			refresh.post(new Runnable() {
     				public void run(){
 //    					nextButton.setEnabled(true);
-    					progressBar.setVisibility(View.GONE);
     				}
     			});
             }
@@ -278,7 +314,7 @@ public class MainActivity extends Activity {
             editor.putBoolean("isFirstRun", false);
             editor.commit();
             
-           // URLHelper.pingInstall();
+            URLHelper.pingInstall();
         }
 }
     

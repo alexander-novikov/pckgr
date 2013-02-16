@@ -41,6 +41,7 @@ public class JsonHelper {
 			JSONObject jsonObj = (JSONObject) obj;
 			
 			JSONArray ja = (JSONArray) jsonObj.get("sdk");
+			if (ja!=null)
 			for (Object object : ja) {
 				SdkNetwork sdk = new SdkNetwork();
 				sdk.setName(((JSONObject)object).get("name").toString());
@@ -76,6 +77,7 @@ public class JsonHelper {
 			JSONObject extra = (JSONObject) jsonObj.get("internaloptions");
 			
 			JSONArray ja = (JSONArray) extra.get("offers");
+			if (ja!=null)
 			for (Object object : ja) {
 				Offer offer = new Offer();
 //				sdk.setName(((JSONObject)object).get("name").toString());

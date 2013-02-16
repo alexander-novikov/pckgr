@@ -46,13 +46,16 @@ public class AaptUtils {
 					}
 					line = buf.readLine();
 				}
-
+				
+				buf.close();
+				in.close();
 			}
 		} catch (IOException e) {
 			e.printStackTrace();
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
+		
 	}
 
 }

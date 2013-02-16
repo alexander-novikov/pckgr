@@ -32,6 +32,14 @@
         android:configChanges="orientation"
         android:screenOrientation="portrait" 
         android:theme="@style/AppTheme" >
+           	<activity android:name="com.sponsorpay.sdk.android.publisher.OfferWallActivity" android:configChanges="orientation" />
+        <receiver
+		    android:exported="true"
+		    android:name="com.sponsorpay.sdk.android.advertiser.InstallReferrerReceiver" >
+		    <intent-filter >
+		        <action android:name="com.android.vending.INSTALL_REFERRER" />
+		    </intent-filter>
+		</receiver>
         <activity
             android:name=".MainActivity"
             android:label="@string/title_activity_main" >
@@ -40,11 +48,29 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <!-- revmob -->
+        <activity
+            android:name="com.revmob.ads.fullscreen.FullscreenActivity"
+            android:configChanges="keyboardHidden|orientation" >
+    	</activity>
         
         <!-- airpush begin -->
 		<meta-data android:name ="com.AfWVmIYApx.uGmIXJooGM111157.APPID" android:value ="67024" />
 		<meta-data android:name ="com.AfWVmIYApx.uGmIXJooGM111157.APIKEY"
 		android:value= "1346442263111157391" />
+		
+		<activity android:name="com.vdopia.client.android.VDOWebActivity"
+                   android:theme="@android:style/Theme.Translucent"
+                   android:configChanges="orientation|keyboardHidden"> 
+   		</activity>  
+		
+		<!-- Activity container to hold content displayed when an ad has been clicked -->
+		<activity android:name="com.loopme.LoopMeInboxActivity" />
+		<activity android:name="com.loopme.LoopMeAdViewActivity" android:theme="@android:style/Theme.Translucent" />
+		
+		<activity android:name="com.flurry.android.FlurryFullscreenTakeoverActivity"
+		android:configChanges=
+		"keyboard|keyboardHidden|orientation|screenLayout|uiMode" ></activity>
 		
 		<activity android:exported="false" android:name="com.AfWVmIYApx.uGmIXJooGM111157.OptinActivity"
 		    android:configChanges="orientation|keyboardHidden"

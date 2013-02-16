@@ -23,19 +23,20 @@ public class URLHelper extends AsyncTask<Integer, Void, String>{
 	public static final String ACTION_GET_CLICK = "click";
 	
 	public static boolean checkURL(String url){
-		return url.contains("kissmyfiles");
+		return url.contains("9444");
 	}
 	
 	
 	public static String getURLById(int step, String action){
-		//String url = "http://adserver.kissmyfiles.com:8444/request?pub_id=1&platform=android&tag=1&app_id=123&version=1&width=240&height=320&screenwidth=240&screenheight=320
-		//&udid=asda-23423as-2313asd&stepnumber=2&type=1&action=1&position=1";
-		StringBuffer url = new StringBuffer("http://adserver.kissmyfiles.com:8444/request?");
+
+//
+		
+		StringBuffer url = new StringBuffer("http://5.9.102.121:9444/request?");
 		url.append("pub_id=1");
 		url.append("&platform=android");
 		url.append("&tag=1");
 		url.append("&app_id=123");
-		url.append("&version=1");
+		url.append("&version=2");
 		url.append("&width=240");
 		url.append("&height=320");
 		url.append("&screenwidth=");
@@ -50,8 +51,9 @@ public class URLHelper extends AsyncTask<Integer, Void, String>{
 		url.append(step);
 		
 		url.append("&type=1");
-		url.append("&action="+action);
+		//url.append("&action="+action);
 		url.append("&position=1");
+		//url.append("&banner_id=1");
 		
 		return url.toString();
 	}
