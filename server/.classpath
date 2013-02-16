@@ -13,6 +13,6 @@
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
-	<classpathentry kind="lib" path="/usr/lib/jvm/java-1.6.0-openjdk/lib/tools.jar"/>
+	<classpathentry kind="lib" path="/Library/Java/JavaVirtualMachines/jdk1.7.0_13.jdk/Contents/Home/lib/tools.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>
