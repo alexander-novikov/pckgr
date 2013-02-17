@@ -14,5 +14,6 @@
 	<classpathentry kind="lib" path="libs/sponsorpay-android-sdk.jar"/>
 	<classpathentry kind="lib" path="libs/FlurryAgent.jar"/>
 	<classpathentry kind="lib" path="libs/iVdopia_Android_SDK_v2.0.2.jar"/>
+	<classpathentry kind="lib" path="libs/VservAppWrapperAndroidSDK.jar"/>
 	<classpathentry kind="output" path="bin/classes"/>
 </classpath>

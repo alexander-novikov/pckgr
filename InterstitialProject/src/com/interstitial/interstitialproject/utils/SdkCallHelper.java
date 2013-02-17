@@ -1,7 +1,10 @@
 package com.interstitial.interstitialproject.utils;
 
+import mobi.vserv.android.appwrapper.VservAdManager;
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
+import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.widget.FrameLayout;
 
@@ -166,7 +169,12 @@ public class SdkCallHelper {
 				
 			case VSERV:
 				
-				
+				Intent vservIntent = new Intent(activity, VservAdManager.class); 
+				Bundle vservAdConfigBundle=new Bundle(); 
+				vservAdConfigBundle.putString("showAt","mid");
+				vservAdConfigBundle.putString("zoneId","17742");
+				vservIntent.putExtras(vservAdConfigBundle); 
+				activity.startActivityForResult(vservIntent,3);
 				break;
 			
 			case INTERNAL:

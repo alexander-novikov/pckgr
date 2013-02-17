@@ -210,7 +210,6 @@ public class Banner implements IWebClientListener {
 	
 
 	public void initLastButtons() {
-		// TODO Auto-generated method stub
 		mButtonGetExternal = getBannerContent().findViewById(
 				R.id.banner_get_external);
 		mButtonGetExternal.setOnClickListener(new OnClickListener() {

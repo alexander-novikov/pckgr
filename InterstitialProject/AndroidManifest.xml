@@ -32,6 +32,23 @@
         android:configChanges="orientation"
         android:screenOrientation="portrait" 
         android:theme="@style/AppTheme" >
+        
+        <activity  
+			android:name="mobi.vserv.android.appwrapper.VservAdManager"  
+			android:launchMode="singleTop"  
+			android:screenOrientation="portrait"  
+			android:process=":vserv"  
+			android:windowSoftInputMode="adjustPan" /> 
+		<activity  
+			android:name="mobi.vserv.org.ormma.view.Browser" 
+			android:screenOrientation="portrait" 
+			android:windowSoftInputMode="adjustPan" /> 
+		<activity  
+			android:name="mobi.vserv.org.ormma.view.OrmmaActionHandler"  
+			android:screenOrientation="portrait" 
+			android:windowSoftInputMode="adjustPan" />
+        
+        
            	<activity android:name="com.sponsorpay.sdk.android.publisher.OfferWallActivity" android:configChanges="orientation" />
         <receiver
 		    android:exported="true"

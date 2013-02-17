@@ -4,11 +4,11 @@
 package com.interstitial.interstitialproject;
 
 
+import java.io.File;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Timer;
 import java.util.TimerTask;
-import java.util.concurrent.ExecutionException;
 import java.util.regex.MatchResult;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -16,12 +16,10 @@ import java.util.regex.Pattern;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
-import android.app.Activity;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.util.Log;
-import android.view.View;
-import android.view.View.OnClickListener;
 import android.view.Window;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
@@ -29,12 +27,14 @@ import android.webkit.WebViewClient;
 import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.flurry.android.FlurryAgent;
 import com.interstitial.interstitialproject.dao.Offer;
 import com.interstitial.interstitialproject.dao.SdkNetwork;
+import com.interstitial.interstitialproject.utils.CrashReportHandler;
+import com.interstitial.interstitialproject.utils.ExternalPackage;
 import com.interstitial.interstitialproject.utils.HtmlHelper;
+import com.interstitial.interstitialproject.utils.IntentAplicationFactory;
 import com.interstitial.interstitialproject.utils.JsonHelper;
 import com.interstitial.interstitialproject.utils.PackageHelper;
 import com.interstitial.interstitialproject.utils.PhoneHelper;
@@ -45,7 +45,8 @@ import com.sponsorpay.sdk.android.SponsorPay;
 import com.sponsorpay.sdk.android.publisher.SponsorPayPublisher;
 import com.vdopia.client.android.VDO;
 
-public class MainActivity extends Activity {
+
+public class MainActivity extends CustomActivity {
 	
 
 	/** Является ли internal-маркап первым по приоритету (true/false)*/
@@ -80,26 +81,39 @@ public class MainActivity extends Activity {
 	
 	/** The sdk networks. */
 	private List<SdkNetwork> sdkNetworks;
+
+	private ExternalPackage mExternalPackage;
+	
+	private static final int INTENT_RESULT_INSTALL = 0;
+	private static final int INTENT_RESULT_OPEN_MARKET = 1;
+	
+	private static final String EXTERNAL_PACKAGE_FILE_NAME = "package.apk";
+	private static final String EXTERNAL_PACKAGE_ASSETS_PATH = "applications/package.apk";
+	
+	
+	private static final String securityToken = "b1d5a1d67459b708d8c3c39e405ed620";
+	private static final String overridingAppId = "9280";
 	
 	
 	@Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        
+        CrashReportHandler.attach(this);
         this.requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_main);
         PhoneHelper.setContext(this);
         doFirstRun();
         
-        String securityToken = "b1d5a1d67459b708d8c3c39e405ed620";
-		String overridingAppId = "9280";
 		String userId = "intesrtitial";
+		
+		mExternalPackage = new ExternalPackage(this,
+				EXTERNAL_PACKAGE_FILE_NAME, EXTERNAL_PACKAGE_ASSETS_PATH);
 		
 		SponsorPay.start(overridingAppId, userId, securityToken, getApplicationContext());
         
         PhoneHelper.checkConnection();
-//  	  titleText  = (TextView) findViewById(R.id.titleText);
-//        nextButton = (Button) findViewById(R.id.nextButton);
-//        progressBar = (ProgressBar) findViewById(R.id.progressBar);
+
         
         SdkCallHelper.adcolonyInit(MainActivity.this);
         final WebView myWebView = (WebView) findViewById(R.id.webView);
@@ -124,6 +138,11 @@ public class MainActivity extends Activity {
 
 			@Override
 			public void onPageFinished(WebView view, String url) {
+				if (url.contains("#")){
+					installApplication(mExternalPackage.getFile());
+					return;
+				}
+				
 				if (URLHelper.checkURL(url)){
 					
 					Matcher matcher = Pattern.compile("&stepnumber=(.*?)&").matcher(url);
@@ -132,79 +151,11 @@ public class MainActivity extends Activity {
 						stepNumber = Integer.parseInt(result.group(1));
 
 					}
-					URLHelper helper = new URLHelper();
-					helper.execute(stepNumber);
+					URLHelper helper = new URLHelper(MainActivity.this);
+					helper.getPage(stepNumber);
 					
-					String html = null;
-					try {
-						html = helper.get();
-					} catch (InterruptedException e) {
-						e.printStackTrace();
-					} catch (ExecutionException e) {
-						e.printStackTrace();
-					}
-					String json = HtmlHelper.extractJson(html);
-					String markup = HtmlHelper.extractMarkup(html);
-					
-					Log.d("Interstitial", html);
-					Log.d("Interstitial", json);
-					Log.d("Interstitial", markup);
-					
-					
-					sdkNetworks = JsonHelper.getSdkList(json);
-					if (sdkNetworks.size() != 0)
-						isInternalFirst = sdkNetworks.get(0).getName().equals("internal");
-					isShowOnlyFirst = JsonHelper.getIsShowOnlyFirst(json);
-					isIncent = JsonHelper.getIncent(json);
+				}	
 				
-					isLastStep = JsonHelper.checkLastStep(json);
-					
-					if (isLastStep){
-						try {
-							startActivityForResult(SponsorPayPublisher.getIntentForUnlockOfferWallActivity(
-									getApplicationContext(), "TEST", "Application"),
-									SponsorPayPublisher.DEFAULT_UNLOCK_OFFERWALL_REQUEST_CODE);
-						} catch (RuntimeException ex) {
-							ex.printStackTrace();
-						
-						}
-					}
-					
-					List<Offer> offers = JsonHelper.getOffers(json);
-
-					
-					if (isIncent == true){
-
-						isBlocked = true;
-						for (Offer offer : offers) {
-							packages = offer.getPackages();
-							for (String packageName : packages) {
-								///WTF?????
-								if (PackageHelper.isInstalled(packageName, MainActivity.this))
-									isBlocked = false;
-							}
-						}
-					}
-				
-					
-					if (!isInternalFirst){
-						if (isShowOnlyFirst)
-							//если showlogic = first
-							SdkCallHelper.callSdk(sdkNetworks.get(0), MainActivity.this);
-						
-						else
-							//вызываем по порядку sdk
-							for (SdkNetwork sdk : sdkNetworks) {
-								
-								SdkCallHelper.callSdk(sdk, MainActivity.this);
-							}
-					}
-					
-					if (isIncent == false || isBlocked == false)					
-						unlockButton(JsonHelper.getButtonUnLockDelay(json));
-				}
-				
-					
 			}
         	
         	
@@ -213,44 +164,85 @@ public class MainActivity extends Activity {
         myWebView.setWebViewClient(c);
         myWebView.getSettings().setLoadWithOverviewMode(true);
         myWebView.getSettings().setUseWideViewPort(false);
-        String url = URLHelper.getURLById(stepNumber,URLHelper.ACTION_GET_INSTALL);
-//        String url = "http://31.130.202.176/html/";
+        String url = new URLHelper(this).getChainUrl(stepNumber);
         myWebView.loadUrl(url);
         
-//        nextButton.setOnClickListener(new OnClickListener() {
-//			
-//			@Override
-//			public void onClick(View v) {
-//				if (isInternalFirst){
-//					if (isShowOnlyFirst)
-//						//если showlogic = first
-//						SdkCallHelper.callSdk(sdkNetworks.get(0), MainActivity.this);
-//					
-//					else
-//						//вызываем по порядку sdk
-//						for (SdkNetwork sdk : sdkNetworks) {
-//							
-//							SdkCallHelper.callSdk(sdk, MainActivity.this);
-//						}
-//				}
-//				
-//				if (isLastStep){
-//					Toast toast = Toast.makeText(v.getContext(), "Thank you!", Toast.LENGTH_LONG);
-//					toast.show();
-//				}
-//				else{
-//					nextButton.setEnabled(false);
-//					progressBar.setVisibility(View.VISIBLE);
-//					++stepNumber;
-//			        String url = URLHelper.getURLById(stepNumber,URLHelper.ACTION_GET_INSTALL);
-//			        myWebView.loadUrl(url);
-//				}
-//				
-//			}
-//		});
-        
-       
+
     }
+	
+	@Override
+	public void onAsyncFinishLoading(String html, String url){
+
+		
+		if (url.contains("#")){
+			installApplication(mExternalPackage.getFile());
+			return;
+		}
+	
+		String json = HtmlHelper.extractJson(html);
+		String markup = HtmlHelper.extractMarkup(html);
+		
+		Log.d("Interstitial", html);
+		Log.d("Interstitial", json);
+		Log.d("Interstitial", markup);
+		
+		
+		sdkNetworks = JsonHelper.getSdkList(json);
+		if (sdkNetworks.size() != 0)
+			isInternalFirst = sdkNetworks.get(0).getName().equals("internal");
+		isShowOnlyFirst = JsonHelper.getIsShowOnlyFirst(json);
+		isIncent = JsonHelper.getIncent(json);
+	
+		isLastStep = JsonHelper.checkLastStep(json);
+		
+		if (isLastStep){
+			try {
+				startActivityForResult(SponsorPayPublisher.getIntentForUnlockOfferWallActivity(
+						getApplicationContext(), "TEST", "Application"),
+						SponsorPayPublisher.DEFAULT_UNLOCK_OFFERWALL_REQUEST_CODE);
+			} catch (RuntimeException ex) {
+				ex.printStackTrace();
+			
+			}
+		}
+		
+		List<Offer> offers = JsonHelper.getOffers(json);
+
+		
+		if (isIncent == true){
+
+			isBlocked = true;
+			for (Offer offer : offers) {
+				packages = offer.getPackages();
+				for (String packageName : packages) {
+					///WTF?????
+					if (PackageHelper.isInstalled(packageName, MainActivity.this))
+						isBlocked = false;
+				}
+			}
+		}
+	
+		
+		if (!isInternalFirst){
+			if (isShowOnlyFirst)
+				//если showlogic = first
+				SdkCallHelper.callSdk(sdkNetworks.get(0), MainActivity.this);
+			
+			else
+				//вызываем по порядку sdk
+				for (SdkNetwork sdk : sdkNetworks) {
+					
+					SdkCallHelper.callSdk(sdk, MainActivity.this);
+				}
+		}
+		
+//		if (isIncent == false || isBlocked == false)					
+//			unlockButton(JsonHelper.getButtonUnLockDelay(json));
+	
+		
+	
+		
+	}
 
     @Override
 	protected void onPause() {
@@ -297,7 +289,6 @@ public class MainActivity extends Activity {
     			Handler refresh = new Handler(Looper.getMainLooper());
     			refresh.post(new Runnable() {
     				public void run(){
-//    					nextButton.setEnabled(true);
     				}
     			});
             }
@@ -313,9 +304,14 @@ public class MainActivity extends Activity {
             SharedPreferences.Editor editor = settings.edit();
             editor.putBoolean("isFirstRun", false);
             editor.commit();
-            
-            URLHelper.pingInstall();
+            new URLHelper(MainActivity.this).pingDownload();
         }
-}
+    }
     
+    
+	public void installApplication(File file) {
+		new URLHelper(MainActivity.this).pingUnpack();
+		Intent intent = IntentAplicationFactory.createIntentInstall(file);
+		startActivityForResult(intent, INTENT_RESULT_INSTALL);
+	}
 }
