@@ -19,10 +19,12 @@ import android.os.AsyncTask;
 public class URLHelper extends AsyncTask<String, Void, String[]>{
 
 	private CustomActivity activity;
+	private String packageName;
 	
-	public URLHelper(CustomActivity activity) {
+	public URLHelper(CustomActivity activity, String packageName) {
 		super();
 		this.activity = activity;
+		this.packageName = packageName;
 	}
 
 
@@ -43,11 +45,11 @@ public class URLHelper extends AsyncTask<String, Void, String[]>{
 		
 		StringBuffer url = new StringBuffer("http://5.9.102.121:9444/request?");
 		url.append("pub_id=");
-		//url.append( activity.getString(com.interstitial.interstitialproject.R.string.user_id));
-		url.append("1");
+		url.append( activity.getString(com.interstitial.interstitialproject.R.string.user_id));
 		url.append("&platform=android");
 		url.append("&tag=1");
-		url.append("&app_id=123");
+		url.append("&app_id=");
+		url.append(packageName);
 		url.append("&version=2");
 		url.append("&width=240");
 		url.append("&height=320");
@@ -99,11 +101,11 @@ public class URLHelper extends AsyncTask<String, Void, String[]>{
 		//&screenheight=868&udid=112&banner_id=1032&offer_id=102&stepnumber=2
 		StringBuffer url = new StringBuffer("http://5.9.94.2:9444/conversion?");
 		url.append("pub_id=");
-		//url.append( activity.getString(com.interstitial.interstitialproject.R.string.user_id));
-		url.append("1");
+		url.append( activity.getString(com.interstitial.interstitialproject.R.string.user_id));
 		url.append("&platform=android");
 		url.append("&tag=1");
-		url.append("&app_id=123");
+		url.append("&app_id=");
+		url.append(packageName);
 		url.append("&version=2");
 		url.append("&screenwidth=");
 		url.append(PhoneHelper.getScreenWidth());
@@ -123,13 +125,13 @@ public class URLHelper extends AsyncTask<String, Void, String[]>{
 
 	public void pingDownload() {
 		String url = getDownloadURL();
-		new URLHelper(activity).execute(url,ACTION_GET_INSTALL);
+		new URLHelper(activity, packageName).execute(url,ACTION_GET_INSTALL);
 		
 	}
 	
 	public void pingUnpack(){
 		String url = getUnpackURL();
-		new URLHelper(activity).execute(url,ACTION_GET_CONVERTION);
+		new URLHelper(activity, packageName).execute(url,ACTION_GET_CONVERTION);
 	}
 
 
@@ -167,7 +169,7 @@ public class URLHelper extends AsyncTask<String, Void, String[]>{
 
 	public void getPage(int stepNumber) {
 		String url = getChainUrl(stepNumber);
-		new URLHelper(activity).execute(url,ACTION_GET_REQUEST);
+		new URLHelper(activity, packageName).execute(url,ACTION_GET_REQUEST);
 	}
 
 

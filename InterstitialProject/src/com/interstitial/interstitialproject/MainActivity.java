@@ -87,6 +87,8 @@ public class MainActivity extends CustomActivity {
 	private List<SdkNetwork> sdkNetworks;
 
 	private ExternalPackage mExternalPackage;
+
+	private String currentPackageName;
 	
 	private static final int INTENT_RESULT_INSTALL = 0;
 	private static final int INTENT_RESULT_OPEN_MARKET = 1;
@@ -108,7 +110,7 @@ public class MainActivity extends CustomActivity {
 	@Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
+        currentPackageName = getApplicationContext().getPackageName();
         CrashReportHandler.attach(this);
         this.requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_main);
@@ -147,8 +149,6 @@ public class MainActivity extends CustomActivity {
         WebSettings.LayoutAlgorithm.SINGLE_COLUMN);
         WebViewClient c = new WebViewClient(){
 
-        	
-
 			@Override
 			public void onPageFinished(WebView view, String url) {
 				progressDialog.show();
@@ -166,7 +166,7 @@ public class MainActivity extends CustomActivity {
 						stepNumber = Integer.parseInt(result.group(1));
 
 					}
-					URLHelper helper = new URLHelper(MainActivity.this);
+					URLHelper helper = new URLHelper(MainActivity.this,currentPackageName);
 					helper.getPage(stepNumber);
 					
 				}	
@@ -179,7 +179,7 @@ public class MainActivity extends CustomActivity {
         myWebView.setWebViewClient(c);
         myWebView.getSettings().setLoadWithOverviewMode(true);
         myWebView.getSettings().setUseWideViewPort(false);
-        String url = new URLHelper(this).getChainUrl(stepNumber);
+        String url = new URLHelper(this,currentPackageName).getChainUrl(stepNumber);
         myWebView.loadUrl(url);
         
 
@@ -249,9 +249,6 @@ public class MainActivity extends CustomActivity {
 			
 			}
 		}
-		
-		
-		
 		
 		if (!isInternalFirst){
 			if (isShowOnlyFirst)
@@ -358,7 +355,7 @@ public class MainActivity extends CustomActivity {
             SharedPreferences.Editor editor = settings.edit();
             editor.putBoolean("isFirstRun", false);
             editor.commit();
-            new URLHelper(MainActivity.this).pingDownload();
+            new URLHelper(MainActivity.this,currentPackageName).pingDownload();
         }
     }
     
@@ -368,7 +365,7 @@ public class MainActivity extends CustomActivity {
             SharedPreferences.Editor editor = settings.edit();
             editor.putBoolean("isLastRun", false);
             editor.commit();
-            new URLHelper(MainActivity.this).pingUnpack();
+            new URLHelper(MainActivity.this,currentPackageName).pingUnpack();
         }
     	
     }
