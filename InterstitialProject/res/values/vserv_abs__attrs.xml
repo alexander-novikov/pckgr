@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <declare-styleable name="Vserv.SherlockTheme">
+        <attr name="vserv_actionDropDownStyle" format="reference" />
+        <attr name="vserv_actionButtonStyle" format="reference" />
+        <attr name="vserv_actionBarTabStyle" format="reference" />
+        <attr name="vserv_actionBarTabBarStyle" format="reference" />
+        <attr name="vserv_actionBarTabTextStyle" format="reference" />
+        <attr name="vserv_actionOverflowButtonStyle" format="reference" />
+        <attr name="vserv_actionHomeButtonStyle" format="reference" />
+        <!--attr name="actionBarStyle" format="reference" /-->
+        <attr name="vserv_actionBarSize" format="dimension" >
+            <enum name="wrap_content" value="0" />
+        </attr>
+        <attr name="vserv_actionMenuTextAppearance" format="reference" />
+        <attr name="vserv_actionMenuTextColor" format="color|reference" />        
+        <attr name="vserv_actionModeCloseButtonStyle" format="reference" />
+        <attr name="vserv_actionModeBackground" format="reference" />
+        <attr name="vserv_actionModeCloseDrawable" format="reference" />
+        <attr name="vserv_homeAsUpIndicator" format="reference" />
+        <attr name="vserv_selectableItemBackground" format="reference" />
+        <attr name="vserv_dropDownListViewStyle" format="reference" />
+        <attr name="vserv_popupMenuStyle" format="reference" />
+        <attr name="vserv_dropdownListPreferredItemHeight" format="dimension" />
+        <attr name="vserv_actionSpinnerItemStyle" format="reference" />
+        <attr name="vserv_windowActionBar" format="boolean"/>
+        <attr name="vserv_windowActionModeOverlay" format="boolean"/>
+        
+        
+        <attr name="vserv_abNavigationMode">
+            <enum name="normal" value="0" />
+            <enum name="listMode" value="1" />
+            <enum name="tabMode" value="2" />
+        </attr>
+        <attr name="vserv_abDisplayOptions">
+            <flag name="useLogo" value="0x1" />
+            <flag name="showHome" value="0x2" />
+            <flag name="homeAsUp" value="0x4" />
+            <flag name="showTitle" value="0x8" />
+            <flag name="showCustom" value="0x10" />
+        </attr>
+        <attr name="vserv_abTitle" format="string" />
+        <attr name="vserv_abSubtitle" format="string" />
+        <attr name="vserv_abTitleTextStyle" format="reference" />
+        <attr name="vserv_abSubtitleTextStyle" format="reference" />
+        <attr name="vserv_abIcon" format="reference" />
+        <attr name="vserv_abLogo" format="reference" />
+        <attr name="vserv_abDivider" format="reference|color" />
+        <attr name="vserv_abBackground" format="reference|color" />
+        <attr name="vserv_abBackgroundStacked" format="reference|color" />
+        <attr name="vserv_abCustomNavigationLayout" format="reference" />
+        <attr name="vserv_abHeight" format="reference|dimension" />
+        <attr name="vserv_abHomeLayout" format="reference" />
+        <attr name="vserv_abProgressBarStyle" format="reference" />
+        <attr name="vserv_abIndeterminateProgressStyle" format="reference" />
+        <attr name="vserv_abProgressBarPadding" format="dimension" />
+        <attr name="vserv_abItemPadding" format="dimension" />
+	</declare-styleable>
+</resources>

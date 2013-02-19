@@ -9,6 +9,246 @@ package com.interstitial.interstitialproject;
 
 public final class R {
     public static final class attr {
+        /** <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+<p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+         */
+        public static final int vserv_abBackground=0x7f01001e;
+        /** <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+<p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+         */
+        public static final int vserv_abBackgroundStacked=0x7f01001f;
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int vserv_abCustomNavigationLayout=0x7f010020;
+        /** <p>Must be one or more (separated by '|') of the following constant values.</p>
+<table>
+<colgroup align="left" />
+<colgroup align="left" />
+<colgroup align="left" />
+<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+<tr><td><code>useLogo</code></td><td>0x1</td><td></td></tr>
+<tr><td><code>showHome</code></td><td>0x2</td><td></td></tr>
+<tr><td><code>homeAsUp</code></td><td>0x4</td><td></td></tr>
+<tr><td><code>showTitle</code></td><td>0x8</td><td></td></tr>
+<tr><td><code>showCustom</code></td><td>0x10</td><td></td></tr>
+</table>
+         */
+        public static final int vserv_abDisplayOptions=0x7f010016;
+        /** <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+<p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+         */
+        public static final int vserv_abDivider=0x7f01001d;
+        /** <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+<p>May be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+         */
+        public static final int vserv_abHeight=0x7f010021;
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int vserv_abHomeLayout=0x7f010022;
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int vserv_abIcon=0x7f01001b;
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int vserv_abIndeterminateProgressStyle=0x7f010024;
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int vserv_abItemPadding=0x7f010026;
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int vserv_abLogo=0x7f01001c;
+        /** <p>Must be one of the following constant values.</p>
+<table>
+<colgroup align="left" />
+<colgroup align="left" />
+<colgroup align="left" />
+<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+<tr><td><code>normal</code></td><td>0</td><td></td></tr>
+<tr><td><code>listMode</code></td><td>1</td><td></td></tr>
+<tr><td><code>tabMode</code></td><td>2</td><td></td></tr>
+</table>
+         */
+        public static final int vserv_abNavigationMode=0x7f010015;
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int vserv_abProgressBarPadding=0x7f010025;
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int vserv_abProgressBarStyle=0x7f010023;
+        /** <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int vserv_abSubtitle=0x7f010018;
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int vserv_abSubtitleTextStyle=0x7f01001a;
+        /** <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int vserv_abTitle=0x7f010017;
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int vserv_abTitleTextStyle=0x7f010019;
+        /** attr name="actionBarStyle" format="reference" /
+         <p>May be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+<p>May be one of the following constant values.</p>
+<table>
+<colgroup align="left" />
+<colgroup align="left" />
+<colgroup align="left" />
+<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+<tr><td><code>wrap_content</code></td><td>0</td><td></td></tr>
+</table>
+         */
+        public static final int vserv_actionBarSize=0x7f010007;
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int vserv_actionBarTabBarStyle=0x7f010003;
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int vserv_actionBarTabStyle=0x7f010002;
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int vserv_actionBarTabTextStyle=0x7f010004;
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int vserv_actionButtonStyle=0x7f010001;
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int vserv_actionDropDownStyle=0x7f010000;
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int vserv_actionHomeButtonStyle=0x7f010006;
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int vserv_actionMenuTextAppearance=0x7f010008;
+        /** <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+<p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+         */
+        public static final int vserv_actionMenuTextColor=0x7f010009;
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int vserv_actionModeBackground=0x7f01000b;
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int vserv_actionModeCloseButtonStyle=0x7f01000a;
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int vserv_actionModeCloseDrawable=0x7f01000c;
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int vserv_actionOverflowButtonStyle=0x7f010005;
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int vserv_actionSpinnerItemStyle=0x7f010012;
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int vserv_dropDownListViewStyle=0x7f01000f;
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int vserv_dropdownListPreferredItemHeight=0x7f010011;
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int vserv_homeAsUpIndicator=0x7f01000d;
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int vserv_popupMenuStyle=0x7f010010;
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int vserv_selectableItemBackground=0x7f01000e;
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int vserv_windowActionBar=0x7f010013;
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int vserv_windowActionModeOverlay=0x7f010014;
+    }
+    public static final class color {
+        public static final int vserv_abs__item_bg=0x7f080001;
+        public static final int vserv_abs__item_focused=0x7f080000;
+        public static final int vserv_abs__tab_text_color_dark=0x7f080002;
+        public static final int vserv_abs__tab_text_color_light=0x7f080003;
     }
     public static final class dimen {
         public static final int padding_large=0x7f040002;
@@ -18,18 +258,115 @@ public final class R {
     public static final class drawable {
         public static final int android_icon=0x7f020000;
         public static final int bg=0x7f020001;
-        public static final int ic_action_search=0x7f020002;
-        public static final int ic_launcher=0x7f020003;
+        public static final int custom_button=0x7f020002;
+        public static final int ic_action_search=0x7f020003;
+        public static final int ic_launcher=0x7f020004;
+        public static final int vserv_abs__ab_stacked_transparent_dark_holo=0x7f020005;
+        public static final int vserv_abs__ab_stacked_transparent_light_holo=0x7f020006;
+        public static final int vserv_abs__action_item_divider=0x7f020007;
+        public static final int vserv_abs__cab_background_holo_dark=0x7f020008;
+        public static final int vserv_abs__cab_background_holo_light=0x7f020009;
+        public static final int vserv_abs__cab_ic_close_focused_holo=0x7f02000a;
+        public static final int vserv_abs__cab_ic_close_holo=0x7f02000b;
+        public static final int vserv_abs__cab_ic_close_normal_holo=0x7f02000c;
+        public static final int vserv_abs__cab_ic_close_pressed_holo=0x7f02000d;
+        public static final int vserv_abs__ic_ab_back_holo_dark=0x7f02000e;
+        public static final int vserv_abs__ic_ab_back_holo_light=0x7f02000f;
+        public static final int vserv_abs__item_background_holo_dark=0x7f020010;
+        public static final int vserv_abs__item_background_holo_light=0x7f020011;
+        public static final int vserv_abs__list_focused_holo=0x7f020012;
+        public static final int vserv_abs__list_longpressed_holo=0x7f020013;
+        public static final int vserv_abs__list_pressed_holo_dark=0x7f020014;
+        public static final int vserv_abs__list_pressed_holo_light=0x7f020015;
+        public static final int vserv_abs__list_selector_background_transition_holo_dark=0x7f020016;
+        public static final int vserv_abs__list_selector_background_transition_holo_light=0x7f020017;
+        public static final int vserv_abs__list_selector_disabled_holo_dark=0x7f020018;
+        public static final int vserv_abs__list_selector_disabled_holo_light=0x7f020019;
+        public static final int vserv_abs__spinner_background_holo_dark=0x7f02001a;
+        public static final int vserv_abs__spinner_background_holo_light=0x7f02001b;
+        public static final int vserv_abs__spinner_default_holo_dark=0x7f02001c;
+        public static final int vserv_abs__spinner_default_holo_light=0x7f02001d;
+        public static final int vserv_abs__spinner_disabled_holo_dark=0x7f02001e;
+        public static final int vserv_abs__spinner_disabled_holo_light=0x7f02001f;
+        public static final int vserv_abs__spinner_focused_holo_dark=0x7f020020;
+        public static final int vserv_abs__spinner_focused_holo_light=0x7f020021;
+        public static final int vserv_abs__spinner_pressed_holo_dark=0x7f020022;
+        public static final int vserv_abs__spinner_pressed_holo_light=0x7f020023;
+        public static final int vserv_abs__tab_indicator_holo=0x7f020024;
+        public static final int vserv_abs__tab_selected_focused_holo=0x7f020025;
+        public static final int vserv_abs__tab_selected_holo=0x7f020026;
+        public static final int vserv_abs__tab_selected_pressed_focused_holo=0x7f020027;
+        public static final int vserv_abs__tab_selected_pressed_holo=0x7f020028;
+        public static final int vserv_abs__tab_unselected_focused_holo=0x7f020029;
+        public static final int vserv_abs__tab_unselected_holo=0x7f02002a;
+        public static final int vserv_abs__tab_unselected_pressed_focused_holo=0x7f02002b;
+        public static final int vserv_abs__tab_unselected_pressed_holo=0x7f02002c;
+        public static final int vserv_browser_bkgrnd=0x7f02002d;
+        public static final int vserv_browser_close=0x7f02002e;
+        public static final int vserv_browser_leftarrow=0x7f02002f;
+        public static final int vserv_browser_refresh=0x7f020030;
+        public static final int vserv_browser_rightarrow=0x7f020031;
+        public static final int vserv_browser_unrightarrow=0x7f020032;
+        public static final int vserv_ic_menu_cancel=0x7f020033;
+        public static final int vserv_ic_menu_exit=0x7f020034;
+        public static final int vserv_ic_menu_skip=0x7f020035;
     }
     public static final class id {
-        public static final int menu_settings=0x7f080001;
-        public static final int webView=0x7f080000;
+        public static final int abs__action_bar=0x7f07001e;
+        public static final int abs__action_bar_container=0x7f07001d;
+        public static final int abs__action_bar_subtitle=0x7f07001c;
+        public static final int abs__action_bar_title=0x7f07001b;
+        public static final int abs__actions=0x7f07000d;
+        public static final int abs__content=0x7f07001f;
+        public static final int abs__custom=0x7f070010;
+        public static final int abs__home=0x7f070013;
+        public static final int abs__home_wrapper=0x7f07000c;
+        public static final int abs__iprogress=0x7f07000e;
+        public static final int abs__item_custom=0x7f070017;
+        public static final int abs__item_icon=0x7f070015;
+        public static final int abs__item_text=0x7f070016;
+        public static final int abs__nav_list=0x7f07000f;
+        public static final int abs__nav_tabs=0x7f070011;
+        public static final int abs__nav_tabs_layout=0x7f070014;
+        public static final int abs__tab=0x7f070019;
+        public static final int abs__tab_custom=0x7f07001a;
+        public static final int abs__tab_icon=0x7f070018;
+        public static final int abs__up=0x7f070012;
+        public static final int homeAsUp=0x7f070006;
+        public static final int incentButton=0x7f07000b;
+        public static final int incentText=0x7f07000a;
+        public static final int listMode=0x7f070002;
+        public static final int menu_settings=0x7f070020;
+        public static final int normal=0x7f070001;
+        public static final int showCustom=0x7f070008;
+        public static final int showHome=0x7f070005;
+        public static final int showTitle=0x7f070007;
+        public static final int tabMode=0x7f070003;
+        public static final int useLogo=0x7f070004;
+        public static final int webView=0x7f070009;
+        public static final int wrap_content=0x7f070000;
+    }
+    public static final class integer {
+        public static final int vserv_abs__max_action_buttons=0x7f090000;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;
+        public static final int dialog_offer=0x7f030001;
+        public static final int vserv_abs__action_bar=0x7f030002;
+        public static final int vserv_abs__action_bar_home=0x7f030003;
+        public static final int vserv_abs__action_bar_inline=0x7f030004;
+        public static final int vserv_abs__action_bar_item_layout=0x7f030005;
+        public static final int vserv_abs__action_bar_tab_layout=0x7f030006;
+        public static final int vserv_abs__action_bar_title_item=0x7f030007;
+        public static final int vserv_abs__screen_action_bar=0x7f030008;
+        public static final int vserv_abs__screen_action_bar_inline=0x7f030009;
+        public static final int vserv_abs__screen_action_bar_inline_overlay=0x7f03000a;
+        public static final int vserv_abs__screen_action_bar_overlay=0x7f03000b;
+        public static final int vserv_abs__screen_simple=0x7f03000c;
+        public static final int vserv_abs__simple_spinner_item=0x7f03000d;
     }
     public static final class menu {
-        public static final int activity_main=0x7f070000;
+        public static final int activity_main=0x7f0a0000;
     }
     public static final class string {
         public static final int app_name=0x7f050006;
@@ -42,9 +379,607 @@ public final class R {
         public static final int title_activity_main=0x7f050003;
         public static final int title_main=0x7f050004;
         public static final int user_id=0x7f050007;
+        public static final int vserv_abs__tab_under_ab_tag=0x7f05000b;
         public static final int web_error=0x7f050008;
     }
     public static final class style {
         public static final int AppTheme=0x7f060000;
+        public static final int Vserv_TextAppearance_Widget_Subtitle=0x7f06001c;
+        public static final int Vserv_TextAppearance_Widget_Title=0x7f06001b;
+        public static final int Vserv_Theme_Sherlock=0x7f060001;
+        public static final int Vserv_Theme_Sherlock_Light=0x7f06000e;
+        public static final int Vserv_Widget_Sherlock_ActionBar_TabBar=0x7f060002;
+        public static final int Vserv_Widget_Sherlock_ActionBar_TabText=0x7f060004;
+        public static final int Vserv_Widget_Sherlock_ActionBar_TabView=0x7f060003;
+        public static final int Vserv_Widget_Sherlock_ActionButton=0x7f060005;
+        public static final int Vserv_Widget_Sherlock_ActionButton_CloseMode=0x7f060007;
+        public static final int Vserv_Widget_Sherlock_ActionButton_Home=0x7f060008;
+        public static final int Vserv_Widget_Sherlock_ActionButton_Overflow=0x7f060009;
+        public static final int Vserv_Widget_Sherlock_Light_ActionBar_TabBar=0x7f06000f;
+        public static final int Vserv_Widget_Sherlock_Light_ActionBar_TabText=0x7f060011;
+        public static final int Vserv_Widget_Sherlock_Light_ActionBar_TabView=0x7f060010;
+        public static final int Vserv_Widget_Sherlock_Light_ActionButton=0x7f060012;
+        public static final int Vserv_Widget_Sherlock_Light_ActionButton_CloseMode=0x7f060017;
+        public static final int Vserv_Widget_Sherlock_Light_ActionButton_Home=0x7f060013;
+        public static final int Vserv_Widget_Sherlock_Light_ActionButton_Overflow=0x7f060014;
+        public static final int Vserv_Widget_Sherlock_Light_ListPopupWindow=0x7f060019;
+        public static final int Vserv_Widget_Sherlock_Light_ListView_DropDown=0x7f060018;
+        public static final int Vserv_Widget_Sherlock_Light_PopupMenu=0x7f06001a;
+        public static final int Vserv_Widget_Sherlock_Light_Spinner=0x7f060016;
+        public static final int Vserv_Widget_Sherlock_Light_TextView_SpinnerItem_ActionBar=0x7f060015;
+        public static final int Vserv_Widget_Sherlock_ListPopupWindow=0x7f06000b;
+        public static final int Vserv_Widget_Sherlock_ListView_DropDown=0x7f06000c;
+        public static final int Vserv_Widget_Sherlock_PopupMenu=0x7f06000d;
+        public static final int Vserv_Widget_Sherlock_Spinner=0x7f060006;
+        public static final int Vserv_Widget_Sherlock_TextView_SpinnerItem_ActionBar=0x7f06000a;
     }
+    public static final class styleable {
+        /** Attributes that can be used with a Vserv_SherlockTheme.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #Vserv_SherlockTheme_vserv_abBackground com.interstitial.interstitialproject:vserv_abBackground}</code></td><td></td></tr>
+           <tr><td><code>{@link #Vserv_SherlockTheme_vserv_abBackgroundStacked com.interstitial.interstitialproject:vserv_abBackgroundStacked}</code></td><td></td></tr>
+           <tr><td><code>{@link #Vserv_SherlockTheme_vserv_abCustomNavigationLayout com.interstitial.interstitialproject:vserv_abCustomNavigationLayout}</code></td><td></td></tr>
+           <tr><td><code>{@link #Vserv_SherlockTheme_vserv_abDisplayOptions com.interstitial.interstitialproject:vserv_abDisplayOptions}</code></td><td></td></tr>
+           <tr><td><code>{@link #Vserv_SherlockTheme_vserv_abDivider com.interstitial.interstitialproject:vserv_abDivider}</code></td><td></td></tr>
+           <tr><td><code>{@link #Vserv_SherlockTheme_vserv_abHeight com.interstitial.interstitialproject:vserv_abHeight}</code></td><td></td></tr>
+           <tr><td><code>{@link #Vserv_SherlockTheme_vserv_abHomeLayout com.interstitial.interstitialproject:vserv_abHomeLayout}</code></td><td></td></tr>
+           <tr><td><code>{@link #Vserv_SherlockTheme_vserv_abIcon com.interstitial.interstitialproject:vserv_abIcon}</code></td><td></td></tr>
+           <tr><td><code>{@link #Vserv_SherlockTheme_vserv_abIndeterminateProgressStyle com.interstitial.interstitialproject:vserv_abIndeterminateProgressStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Vserv_SherlockTheme_vserv_abItemPadding com.interstitial.interstitialproject:vserv_abItemPadding}</code></td><td></td></tr>
+           <tr><td><code>{@link #Vserv_SherlockTheme_vserv_abLogo com.interstitial.interstitialproject:vserv_abLogo}</code></td><td></td></tr>
+           <tr><td><code>{@link #Vserv_SherlockTheme_vserv_abNavigationMode com.interstitial.interstitialproject:vserv_abNavigationMode}</code></td><td></td></tr>
+           <tr><td><code>{@link #Vserv_SherlockTheme_vserv_abProgressBarPadding com.interstitial.interstitialproject:vserv_abProgressBarPadding}</code></td><td></td></tr>
+           <tr><td><code>{@link #Vserv_SherlockTheme_vserv_abProgressBarStyle com.interstitial.interstitialproject:vserv_abProgressBarStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Vserv_SherlockTheme_vserv_abSubtitle com.interstitial.interstitialproject:vserv_abSubtitle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Vserv_SherlockTheme_vserv_abSubtitleTextStyle com.interstitial.interstitialproject:vserv_abSubtitleTextStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Vserv_SherlockTheme_vserv_abTitle com.interstitial.interstitialproject:vserv_abTitle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Vserv_SherlockTheme_vserv_abTitleTextStyle com.interstitial.interstitialproject:vserv_abTitleTextStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Vserv_SherlockTheme_vserv_actionBarSize com.interstitial.interstitialproject:vserv_actionBarSize}</code></td><td>attr name="actionBarStyle" format="reference" /</td></tr>
+           <tr><td><code>{@link #Vserv_SherlockTheme_vserv_actionBarTabBarStyle com.interstitial.interstitialproject:vserv_actionBarTabBarStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Vserv_SherlockTheme_vserv_actionBarTabStyle com.interstitial.interstitialproject:vserv_actionBarTabStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Vserv_SherlockTheme_vserv_actionBarTabTextStyle com.interstitial.interstitialproject:vserv_actionBarTabTextStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Vserv_SherlockTheme_vserv_actionButtonStyle com.interstitial.interstitialproject:vserv_actionButtonStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Vserv_SherlockTheme_vserv_actionDropDownStyle com.interstitial.interstitialproject:vserv_actionDropDownStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Vserv_SherlockTheme_vserv_actionHomeButtonStyle com.interstitial.interstitialproject:vserv_actionHomeButtonStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Vserv_SherlockTheme_vserv_actionMenuTextAppearance com.interstitial.interstitialproject:vserv_actionMenuTextAppearance}</code></td><td></td></tr>
+           <tr><td><code>{@link #Vserv_SherlockTheme_vserv_actionMenuTextColor com.interstitial.interstitialproject:vserv_actionMenuTextColor}</code></td><td></td></tr>
+           <tr><td><code>{@link #Vserv_SherlockTheme_vserv_actionModeBackground com.interstitial.interstitialproject:vserv_actionModeBackground}</code></td><td></td></tr>
+           <tr><td><code>{@link #Vserv_SherlockTheme_vserv_actionModeCloseButtonStyle com.interstitial.interstitialproject:vserv_actionModeCloseButtonStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Vserv_SherlockTheme_vserv_actionModeCloseDrawable com.interstitial.interstitialproject:vserv_actionModeCloseDrawable}</code></td><td></td></tr>
+           <tr><td><code>{@link #Vserv_SherlockTheme_vserv_actionOverflowButtonStyle com.interstitial.interstitialproject:vserv_actionOverflowButtonStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Vserv_SherlockTheme_vserv_actionSpinnerItemStyle com.interstitial.interstitialproject:vserv_actionSpinnerItemStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Vserv_SherlockTheme_vserv_dropDownListViewStyle com.interstitial.interstitialproject:vserv_dropDownListViewStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Vserv_SherlockTheme_vserv_dropdownListPreferredItemHeight com.interstitial.interstitialproject:vserv_dropdownListPreferredItemHeight}</code></td><td></td></tr>
+           <tr><td><code>{@link #Vserv_SherlockTheme_vserv_homeAsUpIndicator com.interstitial.interstitialproject:vserv_homeAsUpIndicator}</code></td><td></td></tr>
+           <tr><td><code>{@link #Vserv_SherlockTheme_vserv_popupMenuStyle com.interstitial.interstitialproject:vserv_popupMenuStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Vserv_SherlockTheme_vserv_selectableItemBackground com.interstitial.interstitialproject:vserv_selectableItemBackground}</code></td><td></td></tr>
+           <tr><td><code>{@link #Vserv_SherlockTheme_vserv_windowActionBar com.interstitial.interstitialproject:vserv_windowActionBar}</code></td><td></td></tr>
+           <tr><td><code>{@link #Vserv_SherlockTheme_vserv_windowActionModeOverlay com.interstitial.interstitialproject:vserv_windowActionModeOverlay}</code></td><td></td></tr>
+           </table>
+           @see #Vserv_SherlockTheme_vserv_abBackground
+           @see #Vserv_SherlockTheme_vserv_abBackgroundStacked
+           @see #Vserv_SherlockTheme_vserv_abCustomNavigationLayout
+           @see #Vserv_SherlockTheme_vserv_abDisplayOptions
+           @see #Vserv_SherlockTheme_vserv_abDivider
+           @see #Vserv_SherlockTheme_vserv_abHeight
+           @see #Vserv_SherlockTheme_vserv_abHomeLayout
+           @see #Vserv_SherlockTheme_vserv_abIcon
+           @see #Vserv_SherlockTheme_vserv_abIndeterminateProgressStyle
+           @see #Vserv_SherlockTheme_vserv_abItemPadding
+           @see #Vserv_SherlockTheme_vserv_abLogo
+           @see #Vserv_SherlockTheme_vserv_abNavigationMode
+           @see #Vserv_SherlockTheme_vserv_abProgressBarPadding
+           @see #Vserv_SherlockTheme_vserv_abProgressBarStyle
+           @see #Vserv_SherlockTheme_vserv_abSubtitle
+           @see #Vserv_SherlockTheme_vserv_abSubtitleTextStyle
+           @see #Vserv_SherlockTheme_vserv_abTitle
+           @see #Vserv_SherlockTheme_vserv_abTitleTextStyle
+           @see #Vserv_SherlockTheme_vserv_actionBarSize
+           @see #Vserv_SherlockTheme_vserv_actionBarTabBarStyle
+           @see #Vserv_SherlockTheme_vserv_actionBarTabStyle
+           @see #Vserv_SherlockTheme_vserv_actionBarTabTextStyle
+           @see #Vserv_SherlockTheme_vserv_actionButtonStyle
+           @see #Vserv_SherlockTheme_vserv_actionDropDownStyle
+           @see #Vserv_SherlockTheme_vserv_actionHomeButtonStyle
+           @see #Vserv_SherlockTheme_vserv_actionMenuTextAppearance
+           @see #Vserv_SherlockTheme_vserv_actionMenuTextColor
+           @see #Vserv_SherlockTheme_vserv_actionModeBackground
+           @see #Vserv_SherlockTheme_vserv_actionModeCloseButtonStyle
+           @see #Vserv_SherlockTheme_vserv_actionModeCloseDrawable
+           @see #Vserv_SherlockTheme_vserv_actionOverflowButtonStyle
+           @see #Vserv_SherlockTheme_vserv_actionSpinnerItemStyle
+           @see #Vserv_SherlockTheme_vserv_dropDownListViewStyle
+           @see #Vserv_SherlockTheme_vserv_dropdownListPreferredItemHeight
+           @see #Vserv_SherlockTheme_vserv_homeAsUpIndicator
+           @see #Vserv_SherlockTheme_vserv_popupMenuStyle
+           @see #Vserv_SherlockTheme_vserv_selectableItemBackground
+           @see #Vserv_SherlockTheme_vserv_windowActionBar
+           @see #Vserv_SherlockTheme_vserv_windowActionModeOverlay
+         */
+        public static final int[] Vserv_SherlockTheme = {
+            0x7f010000, 0x7f010001, 0x7f010002, 0x7f010003,
+            0x7f010004, 0x7f010005, 0x7f010006, 0x7f010007,
+            0x7f010008, 0x7f010009, 0x7f01000a, 0x7f01000b,
+            0x7f01000c, 0x7f01000d, 0x7f01000e, 0x7f01000f,
+            0x7f010010, 0x7f010011, 0x7f010012, 0x7f010013,
+            0x7f010014, 0x7f010015, 0x7f010016, 0x7f010017,
+            0x7f010018, 0x7f010019, 0x7f01001a, 0x7f01001b,
+            0x7f01001c, 0x7f01001d, 0x7f01001e, 0x7f01001f,
+            0x7f010020, 0x7f010021, 0x7f010022, 0x7f010023,
+            0x7f010024, 0x7f010025, 0x7f010026
+        };
+        /**
+          <p>This symbol is the offset where the {@link com.interstitial.interstitialproject.R.attr#vserv_abBackground}
+          attribute's value can be found in the {@link #Vserv_SherlockTheme} array.
+
+
+          <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+<p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+          @attr name android:vserv_abBackground
+        */
+        public static final int Vserv_SherlockTheme_vserv_abBackground = 30;
+        /**
+          <p>This symbol is the offset where the {@link com.interstitial.interstitialproject.R.attr#vserv_abBackgroundStacked}
+          attribute's value can be found in the {@link #Vserv_SherlockTheme} array.
+
+
+          <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+<p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+          @attr name android:vserv_abBackgroundStacked
+        */
+        public static final int Vserv_SherlockTheme_vserv_abBackgroundStacked = 31;
+        /**
+          <p>This symbol is the offset where the {@link com.interstitial.interstitialproject.R.attr#vserv_abCustomNavigationLayout}
+          attribute's value can be found in the {@link #Vserv_SherlockTheme} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name android:vserv_abCustomNavigationLayout
+        */
+        public static final int Vserv_SherlockTheme_vserv_abCustomNavigationLayout = 32;
+        /**
+          <p>This symbol is the offset where the {@link com.interstitial.interstitialproject.R.attr#vserv_abDisplayOptions}
+          attribute's value can be found in the {@link #Vserv_SherlockTheme} array.
+
+
+          <p>Must be one or more (separated by '|') of the following constant values.</p>
+<table>
+<colgroup align="left" />
+<colgroup align="left" />
+<colgroup align="left" />
+<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+<tr><td><code>useLogo</code></td><td>0x1</td><td></td></tr>
+<tr><td><code>showHome</code></td><td>0x2</td><td></td></tr>
+<tr><td><code>homeAsUp</code></td><td>0x4</td><td></td></tr>
+<tr><td><code>showTitle</code></td><td>0x8</td><td></td></tr>
+<tr><td><code>showCustom</code></td><td>0x10</td><td></td></tr>
+</table>
+          @attr name android:vserv_abDisplayOptions
+        */
+        public static final int Vserv_SherlockTheme_vserv_abDisplayOptions = 22;
+        /**
+          <p>This symbol is the offset where the {@link com.interstitial.interstitialproject.R.attr#vserv_abDivider}
+          attribute's value can be found in the {@link #Vserv_SherlockTheme} array.
+
+
+          <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+<p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+          @attr name android:vserv_abDivider
+        */
+        public static final int Vserv_SherlockTheme_vserv_abDivider = 29;
+        /**
+          <p>This symbol is the offset where the {@link com.interstitial.interstitialproject.R.attr#vserv_abHeight}
+          attribute's value can be found in the {@link #Vserv_SherlockTheme} array.
+
+
+          <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+<p>May be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+          @attr name android:vserv_abHeight
+        */
+        public static final int Vserv_SherlockTheme_vserv_abHeight = 33;
+        /**
+          <p>This symbol is the offset where the {@link com.interstitial.interstitialproject.R.attr#vserv_abHomeLayout}
+          attribute's value can be found in the {@link #Vserv_SherlockTheme} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name android:vserv_abHomeLayout
+        */
+        public static final int Vserv_SherlockTheme_vserv_abHomeLayout = 34;
+        /**
+          <p>This symbol is the offset where the {@link com.interstitial.interstitialproject.R.attr#vserv_abIcon}
+          attribute's value can be found in the {@link #Vserv_SherlockTheme} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name android:vserv_abIcon
+        */
+        public static final int Vserv_SherlockTheme_vserv_abIcon = 27;
+        /**
+          <p>This symbol is the offset where the {@link com.interstitial.interstitialproject.R.attr#vserv_abIndeterminateProgressStyle}
+          attribute's value can be found in the {@link #Vserv_SherlockTheme} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name android:vserv_abIndeterminateProgressStyle
+        */
+        public static final int Vserv_SherlockTheme_vserv_abIndeterminateProgressStyle = 36;
+        /**
+          <p>This symbol is the offset where the {@link com.interstitial.interstitialproject.R.attr#vserv_abItemPadding}
+          attribute's value can be found in the {@link #Vserv_SherlockTheme} array.
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name android:vserv_abItemPadding
+        */
+        public static final int Vserv_SherlockTheme_vserv_abItemPadding = 38;
+        /**
+          <p>This symbol is the offset where the {@link com.interstitial.interstitialproject.R.attr#vserv_abLogo}
+          attribute's value can be found in the {@link #Vserv_SherlockTheme} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name android:vserv_abLogo
+        */
+        public static final int Vserv_SherlockTheme_vserv_abLogo = 28;
+        /**
+          <p>This symbol is the offset where the {@link com.interstitial.interstitialproject.R.attr#vserv_abNavigationMode}
+          attribute's value can be found in the {@link #Vserv_SherlockTheme} array.
+
+
+          <p>Must be one of the following constant values.</p>
+<table>
+<colgroup align="left" />
+<colgroup align="left" />
+<colgroup align="left" />
+<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+<tr><td><code>normal</code></td><td>0</td><td></td></tr>
+<tr><td><code>listMode</code></td><td>1</td><td></td></tr>
+<tr><td><code>tabMode</code></td><td>2</td><td></td></tr>
+</table>
+          @attr name android:vserv_abNavigationMode
+        */
+        public static final int Vserv_SherlockTheme_vserv_abNavigationMode = 21;
+        /**
+          <p>This symbol is the offset where the {@link com.interstitial.interstitialproject.R.attr#vserv_abProgressBarPadding}
+          attribute's value can be found in the {@link #Vserv_SherlockTheme} array.
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name android:vserv_abProgressBarPadding
+        */
+        public static final int Vserv_SherlockTheme_vserv_abProgressBarPadding = 37;
+        /**
+          <p>This symbol is the offset where the {@link com.interstitial.interstitialproject.R.attr#vserv_abProgressBarStyle}
+          attribute's value can be found in the {@link #Vserv_SherlockTheme} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name android:vserv_abProgressBarStyle
+        */
+        public static final int Vserv_SherlockTheme_vserv_abProgressBarStyle = 35;
+        /**
+          <p>This symbol is the offset where the {@link com.interstitial.interstitialproject.R.attr#vserv_abSubtitle}
+          attribute's value can be found in the {@link #Vserv_SherlockTheme} array.
+
+
+          <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name android:vserv_abSubtitle
+        */
+        public static final int Vserv_SherlockTheme_vserv_abSubtitle = 24;
+        /**
+          <p>This symbol is the offset where the {@link com.interstitial.interstitialproject.R.attr#vserv_abSubtitleTextStyle}
+          attribute's value can be found in the {@link #Vserv_SherlockTheme} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name android:vserv_abSubtitleTextStyle
+        */
+        public static final int Vserv_SherlockTheme_vserv_abSubtitleTextStyle = 26;
+        /**
+          <p>This symbol is the offset where the {@link com.interstitial.interstitialproject.R.attr#vserv_abTitle}
+          attribute's value can be found in the {@link #Vserv_SherlockTheme} array.
+
+
+          <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name android:vserv_abTitle
+        */
+        public static final int Vserv_SherlockTheme_vserv_abTitle = 23;
+        /**
+          <p>This symbol is the offset where the {@link com.interstitial.interstitialproject.R.attr#vserv_abTitleTextStyle}
+          attribute's value can be found in the {@link #Vserv_SherlockTheme} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name android:vserv_abTitleTextStyle
+        */
+        public static final int Vserv_SherlockTheme_vserv_abTitleTextStyle = 25;
+        /**
+          <p>
+          @attr description
+          attr name="actionBarStyle" format="reference" /
+
+
+          <p>May be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+<p>May be one of the following constant values.</p>
+<table>
+<colgroup align="left" />
+<colgroup align="left" />
+<colgroup align="left" />
+<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+<tr><td><code>wrap_content</code></td><td>0</td><td></td></tr>
+</table>
+          <p>This is a private symbol.
+          @attr name android:vserv_actionBarSize
+        */
+        public static final int Vserv_SherlockTheme_vserv_actionBarSize = 7;
+        /**
+          <p>This symbol is the offset where the {@link com.interstitial.interstitialproject.R.attr#vserv_actionBarTabBarStyle}
+          attribute's value can be found in the {@link #Vserv_SherlockTheme} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name android:vserv_actionBarTabBarStyle
+        */
+        public static final int Vserv_SherlockTheme_vserv_actionBarTabBarStyle = 3;
+        /**
+          <p>This symbol is the offset where the {@link com.interstitial.interstitialproject.R.attr#vserv_actionBarTabStyle}
+          attribute's value can be found in the {@link #Vserv_SherlockTheme} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name android:vserv_actionBarTabStyle
+        */
+        public static final int Vserv_SherlockTheme_vserv_actionBarTabStyle = 2;
+        /**
+          <p>This symbol is the offset where the {@link com.interstitial.interstitialproject.R.attr#vserv_actionBarTabTextStyle}
+          attribute's value can be found in the {@link #Vserv_SherlockTheme} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name android:vserv_actionBarTabTextStyle
+        */
+        public static final int Vserv_SherlockTheme_vserv_actionBarTabTextStyle = 4;
+        /**
+          <p>This symbol is the offset where the {@link com.interstitial.interstitialproject.R.attr#vserv_actionButtonStyle}
+          attribute's value can be found in the {@link #Vserv_SherlockTheme} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name android:vserv_actionButtonStyle
+        */
+        public static final int Vserv_SherlockTheme_vserv_actionButtonStyle = 1;
+        /**
+          <p>This symbol is the offset where the {@link com.interstitial.interstitialproject.R.attr#vserv_actionDropDownStyle}
+          attribute's value can be found in the {@link #Vserv_SherlockTheme} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name android:vserv_actionDropDownStyle
+        */
+        public static final int Vserv_SherlockTheme_vserv_actionDropDownStyle = 0;
+        /**
+          <p>This symbol is the offset where the {@link com.interstitial.interstitialproject.R.attr#vserv_actionHomeButtonStyle}
+          attribute's value can be found in the {@link #Vserv_SherlockTheme} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name android:vserv_actionHomeButtonStyle
+        */
+        public static final int Vserv_SherlockTheme_vserv_actionHomeButtonStyle = 6;
+        /**
+          <p>This symbol is the offset where the {@link com.interstitial.interstitialproject.R.attr#vserv_actionMenuTextAppearance}
+          attribute's value can be found in the {@link #Vserv_SherlockTheme} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name android:vserv_actionMenuTextAppearance
+        */
+        public static final int Vserv_SherlockTheme_vserv_actionMenuTextAppearance = 8;
+        /**
+          <p>This symbol is the offset where the {@link com.interstitial.interstitialproject.R.attr#vserv_actionMenuTextColor}
+          attribute's value can be found in the {@link #Vserv_SherlockTheme} array.
+
+
+          <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+<p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+          @attr name android:vserv_actionMenuTextColor
+        */
+        public static final int Vserv_SherlockTheme_vserv_actionMenuTextColor = 9;
+        /**
+          <p>This symbol is the offset where the {@link com.interstitial.interstitialproject.R.attr#vserv_actionModeBackground}
+          attribute's value can be found in the {@link #Vserv_SherlockTheme} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name android:vserv_actionModeBackground
+        */
+        public static final int Vserv_SherlockTheme_vserv_actionModeBackground = 11;
+        /**
+          <p>This symbol is the offset where the {@link com.interstitial.interstitialproject.R.attr#vserv_actionModeCloseButtonStyle}
+          attribute's value can be found in the {@link #Vserv_SherlockTheme} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name android:vserv_actionModeCloseButtonStyle
+        */
+        public static final int Vserv_SherlockTheme_vserv_actionModeCloseButtonStyle = 10;
+        /**
+          <p>This symbol is the offset where the {@link com.interstitial.interstitialproject.R.attr#vserv_actionModeCloseDrawable}
+          attribute's value can be found in the {@link #Vserv_SherlockTheme} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name android:vserv_actionModeCloseDrawable
+        */
+        public static final int Vserv_SherlockTheme_vserv_actionModeCloseDrawable = 12;
+        /**
+          <p>This symbol is the offset where the {@link com.interstitial.interstitialproject.R.attr#vserv_actionOverflowButtonStyle}
+          attribute's value can be found in the {@link #Vserv_SherlockTheme} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name android:vserv_actionOverflowButtonStyle
+        */
+        public static final int Vserv_SherlockTheme_vserv_actionOverflowButtonStyle = 5;
+        /**
+          <p>This symbol is the offset where the {@link com.interstitial.interstitialproject.R.attr#vserv_actionSpinnerItemStyle}
+          attribute's value can be found in the {@link #Vserv_SherlockTheme} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name android:vserv_actionSpinnerItemStyle
+        */
+        public static final int Vserv_SherlockTheme_vserv_actionSpinnerItemStyle = 18;
+        /**
+          <p>This symbol is the offset where the {@link com.interstitial.interstitialproject.R.attr#vserv_dropDownListViewStyle}
+          attribute's value can be found in the {@link #Vserv_SherlockTheme} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name android:vserv_dropDownListViewStyle
+        */
+        public static final int Vserv_SherlockTheme_vserv_dropDownListViewStyle = 15;
+        /**
+          <p>This symbol is the offset where the {@link com.interstitial.interstitialproject.R.attr#vserv_dropdownListPreferredItemHeight}
+          attribute's value can be found in the {@link #Vserv_SherlockTheme} array.
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name android:vserv_dropdownListPreferredItemHeight
+        */
+        public static final int Vserv_SherlockTheme_vserv_dropdownListPreferredItemHeight = 17;
+        /**
+          <p>This symbol is the offset where the {@link com.interstitial.interstitialproject.R.attr#vserv_homeAsUpIndicator}
+          attribute's value can be found in the {@link #Vserv_SherlockTheme} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name android:vserv_homeAsUpIndicator
+        */
+        public static final int Vserv_SherlockTheme_vserv_homeAsUpIndicator = 13;
+        /**
+          <p>This symbol is the offset where the {@link com.interstitial.interstitialproject.R.attr#vserv_popupMenuStyle}
+          attribute's value can be found in the {@link #Vserv_SherlockTheme} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name android:vserv_popupMenuStyle
+        */
+        public static final int Vserv_SherlockTheme_vserv_popupMenuStyle = 16;
+        /**
+          <p>This symbol is the offset where the {@link com.interstitial.interstitialproject.R.attr#vserv_selectableItemBackground}
+          attribute's value can be found in the {@link #Vserv_SherlockTheme} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name android:vserv_selectableItemBackground
+        */
+        public static final int Vserv_SherlockTheme_vserv_selectableItemBackground = 14;
+        /**
+          <p>This symbol is the offset where the {@link com.interstitial.interstitialproject.R.attr#vserv_windowActionBar}
+          attribute's value can be found in the {@link #Vserv_SherlockTheme} array.
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name android:vserv_windowActionBar
+        */
+        public static final int Vserv_SherlockTheme_vserv_windowActionBar = 19;
+        /**
+          <p>This symbol is the offset where the {@link com.interstitial.interstitialproject.R.attr#vserv_windowActionModeOverlay}
+          attribute's value can be found in the {@link #Vserv_SherlockTheme} array.
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name android:vserv_windowActionModeOverlay
+        */
+        public static final int Vserv_SherlockTheme_vserv_windowActionModeOverlay = 20;
+    };
 }

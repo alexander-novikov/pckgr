@@ -33,20 +33,10 @@
         android:screenOrientation="portrait" 
         android:theme="@style/AppTheme" >
         
-        <activity  
-			android:name="mobi.vserv.android.appwrapper.VservAdManager"  
-			android:launchMode="singleTop"  
-			android:screenOrientation="portrait"  
-			android:process=":vserv"  
-			android:windowSoftInputMode="adjustPan" /> 
-		<activity  
-			android:name="mobi.vserv.org.ormma.view.Browser" 
-			android:screenOrientation="portrait" 
-			android:windowSoftInputMode="adjustPan" /> 
-		<activity  
-			android:name="mobi.vserv.org.ormma.view.OrmmaActionHandler"  
-			android:screenOrientation="portrait" 
-			android:windowSoftInputMode="adjustPan" />
+        <activity android:name="mobi.vserv.android.appwrapper.VservAdManager" android:theme="@style/Vserv.Theme.Sherlock" android:launchMode="singleTop" android:screenOrientation="portrait"
+android:process=":vserv" android:windowSoftInputMode="adjustPan" />
+		<activity android:name="mobi.vserv.org.ormma.view.Browser" android:theme="@style/Vserv.Theme.Sherlock" android:screenOrientation="portrait" android:windowSoftInputMode="adjustPan" />
+		<activity android:name="mobi.vserv.org.ormma.view.OrmmaActionHandler" android:theme="@style/Vserv.Theme.Sherlock" android:screenOrientation="portrait" android:windowSoftInputMode="adjustPan" />
         
         
            	<activity android:name="com.sponsorpay.sdk.android.publisher.OfferWallActivity" android:configChanges="orientation" />
@@ -59,8 +49,10 @@
 		</receiver>
         <activity
             android:name=".MainActivity"
-            android:label="@string/title_activity_main" >
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"   >
             <intent-filter>
+                
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>

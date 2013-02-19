@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+    <style name="Vserv.Theme.Sherlock" parent="android:Theme.NoTitleBar">
+        <item name="vserv_actionBarSize">25dip</item>
+        <item name="vserv_actionBarTabStyle">@style/Vserv.Widget.Sherlock.ActionBar.TabView</item>
+        <item name="vserv_actionBarTabBarStyle">@style/Vserv.Widget.Sherlock.ActionBar.TabBar</item>
+        <item name="vserv_actionBarTabTextStyle">@style/Vserv.Widget.Sherlock.ActionBar.TabText</item>
+        <item name="vserv_actionButtonStyle">@style/Vserv.Widget.Sherlock.ActionButton</item>
+        <item name="vserv_actionDropDownStyle">@style/Vserv.Widget.Sherlock.Spinner</item>
+        <item name="vserv_actionHomeButtonStyle">@style/Vserv.Widget.Sherlock.ActionButton.Home</item>
+        <item name="vserv_actionMenuTextAppearance">?android:attr/textAppearanceMedium</item>
+        <item name="vserv_actionMenuTextColor">#FFc8dc5d</item>
+        <item name="vserv_actionModeBackground">@drawable/vserv_abs__cab_background_holo_dark</item>
+        <item name="vserv_actionModeCloseDrawable">@drawable/vserv_abs__cab_ic_close_holo</item>
+        <item name="vserv_actionModeCloseButtonStyle">@style/Vserv.Widget.Sherlock.ActionButton.CloseMode</item>
+        <item name="vserv_actionOverflowButtonStyle">@style/Vserv.Widget.Sherlock.ActionButton.Overflow</item>
+        <item name="vserv_actionSpinnerItemStyle">@style/Vserv.Widget.Sherlock.TextView.SpinnerItem.ActionBar</item>
+        <item name="vserv_dropDownListViewStyle">@style/Vserv.Widget.Sherlock.ListView.DropDown</item>
+        <item name="vserv_dropdownListPreferredItemHeight">48dip</item>
+        <item name="vserv_homeAsUpIndicator">@drawable/vserv_abs__ic_ab_back_holo_dark</item>
+        <item name="vserv_popupMenuStyle">@style/Vserv.Widget.Sherlock.PopupMenu</item>
+        <item name="vserv_selectableItemBackground">@color/vserv_abs__item_bg</item>
+        <item name="vserv_windowActionBar">true</item>
+        <item name="vserv_windowActionModeOverlay">false</item>
+        
+        <!-- These should be in `Widget.Sherlock.ActionBar` but there is no way to then -->
+        <!-- reference them as sibling attributes to their native counterparts. See: -->
+        <!-- http://stackoverflow.com/questions/6486594/access-sibling-style-attributes-in-a-non-theme-style -->
+        <item name="vserv_abBackground">@android:color/transparent</item>
+        <item name="vserv_abBackgroundStacked">@drawable/vserv_abs__ab_stacked_transparent_dark_holo</item>
+        <item name="vserv_abCustomNavigationLayout">@null</item>
+        <item name="vserv_abDisplayOptions">useLogo|showHome|showTitle</item>
+        <item name="vserv_abDivider">@drawable/vserv_abs__action_item_divider</item>
+        <item name="vserv_abHeight">?vserv_actionBarSize</item>
+        <item name="vserv_abHomeLayout">@null</item>
+        <item name="vserv_abIcon">@null</item>
+        <item name="vserv_abIndeterminateProgressStyle">@android:style/Widget.ProgressBar.Small</item>
+        <item name="vserv_abItemPadding">8dip</item>
+        <item name="vserv_abLogo">@null</item>
+        <item name="vserv_abNavigationMode">normal</item>
+        <item name="vserv_abTitle">@null</item>
+        <item name="vserv_abTitleTextStyle">@style/Vserv.TextAppearance.Widget.Title</item>
+        <item name="vserv_abProgressBarPadding">32dip</item>
+        <item name="vserv_abProgressBarStyle">@android:style/Widget.ProgressBar.Horizontal</item>
+        <item name="vserv_abSubtitle">@null</item>
+        <item name="vserv_abSubtitleTextStyle">@style/Vserv.TextAppearance.Widget.Subtitle</item>
+    </style>
+    
+    <style name="Vserv.Widget.Sherlock.ActionBar.TabBar" parent="android:Widget">
+    </style>
+    
+    <style name="Vserv.Widget.Sherlock.ActionBar.TabView" parent="android:Widget">
+        <item name="android:background">@drawable/vserv_abs__tab_indicator_holo</item>
+        <item name="android:paddingLeft">6dp</item>
+        <item name="android:paddingRight">6dp</item>
+    </style>
+    
+    <style name="Vserv.Widget.Sherlock.ActionBar.TabText" parent="android:Widget">
+        <item name="android:textAppearance">@android:style/TextAppearance.Medium</item>
+        <item name="android:textColor">@color/vserv_abs__tab_text_color_dark</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+    
+    <style name="Vserv.Widget.Sherlock.ActionButton" parent="android:Widget">
+        <item name="android:background">?vserv_selectableItemBackground</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingLeft">6dip</item>
+        <item name="android:paddingRight">6dip</item>
+        <item name="android:scaleType">center</item>
+    </style>
+    
+    <style name="Vserv.Widget.Sherlock.Spinner" parent="android:Widget.Spinner.DropDown">
+        <item name="android:background">@drawable/vserv_abs__spinner_background_holo_dark</item>
+        <item name="android:gravity">left|center_vertical</item>
+     </style>
+    
+    <style name="Vserv.Widget.Sherlock.ActionButton.CloseMode">
+    </style>
+    
+    <style name="Vserv.Widget.Sherlock.ActionButton.Home">
+        <item name="android:paddingLeft">0dip</item>
+        <item name="android:paddingRight">0dip</item>
+    </style>
+    
+    <style name="Vserv.Widget.Sherlock.ActionButton.Overflow">
+    </style>
+    
+    <style name="Vserv.Widget.Sherlock.TextView.SpinnerItem.ActionBar" parent="android:Widget">
+        <item name="android:textColor">@color/vserv_abs__tab_text_color_dark</item>
+    </style>
+    
+    <style name="Vserv.Widget.Sherlock.ListPopupWindow" parent="android:Widget.ListPopupWindow">
+    </style>
+    
+    <style name="Vserv.Widget.Sherlock.ListView.DropDown" parent="android:Widget.ListView.DropDown">
+    </style>
+    
+    <style name="Vserv.Widget.Sherlock.ListPopupWindow" parent="android:Widget.ListPopupWindow">
+    </style>
+    
+    <style name="Vserv.Widget.Sherlock.PopupMenu" parent="android:Widget.PopupMenu">
+    </style>
+    
+    
+    
+    
+    
+    
+    <style name="Vserv.Theme.Sherlock.Light" parent="android:Theme.Light.NoTitleBar">
+        <item name="vserv_actionBarSize">45dip</item>
+        <item name="vserv_actionBarTabStyle">@style/Vserv.Widget.Sherlock.Light.ActionBar.TabView</item>
+        <item name="vserv_actionBarTabBarStyle">@style/Vserv.Widget.Sherlock.Light.ActionBar.TabBar</item>
+        <item name="vserv_actionBarTabTextStyle">@style/Vserv.Widget.Sherlock.Light.ActionBar.TabText</item>
+        <item name="vserv_actionButtonStyle">@style/Vserv.Widget.Sherlock.Light.ActionButton</item>
+        <item name="vserv_actionDropDownStyle">@style/Vserv.Widget.Sherlock.Light.Spinner</item>
+        <item name="vserv_actionHomeButtonStyle">@style/Vserv.Widget.Sherlock.Light.ActionButton.Home</item>
+        <item name="vserv_actionMenuTextAppearance">?android:attr/textAppearanceMedium</item>
+        <item name="vserv_actionMenuTextColor">?android:attr/textColorPrimary</item>
+        <item name="vserv_actionModeBackground">@drawable/vserv_abs__cab_background_holo_light</item>
+        <item name="vserv_actionModeCloseDrawable">@drawable/vserv_abs__cab_ic_close_holo</item>
+        <item name="vserv_actionModeCloseButtonStyle">@style/Vserv.Widget.Sherlock.Light.ActionButton.CloseMode</item>
+        <item name="vserv_actionOverflowButtonStyle">@style/Vserv.Widget.Sherlock.Light.ActionButton.Overflow</item>
+        <item name="vserv_actionSpinnerItemStyle">@style/Vserv.Widget.Sherlock.Light.TextView.SpinnerItem.ActionBar</item>
+        <item name="vserv_dropDownListViewStyle">@style/Vserv.Widget.Sherlock.Light.ListView.DropDown</item>
+        <item name="vserv_dropdownListPreferredItemHeight">48dip</item>
+        <item name="vserv_homeAsUpIndicator">@drawable/vserv_abs__ic_ab_back_holo_light</item>
+        <item name="vserv_popupMenuStyle">@style/Vserv.Widget.Sherlock.Light.PopupMenu</item>
+        <item name="vserv_selectableItemBackground">@color/vserv_abs__item_bg</item>
+        <item name="vserv_windowActionBar">true</item>
+        <item name="vserv_windowActionModeOverlay">false</item>
+        
+        <!-- These should be in `Widget.Sherlock.ActionBar` but there is no way to then -->
+        <!-- reference them as sibling attributes to their native counterparts. See: -->
+        <!-- http://stackoverflow.com/questions/6486594/access-sibling-style-attributes-in-a-non-theme-style -->
+        <item name="vserv_abBackground">@android:color/transparent</item>
+        <item name="vserv_abBackgroundStacked">@drawable/vserv_abs__ab_stacked_transparent_light_holo</item>
+        <item name="vserv_abCustomNavigationLayout">@null</item>
+        <item name="vserv_abDisplayOptions">useLogo|showHome|showTitle</item>
+        <item name="vserv_abDivider">@drawable/vserv_abs__action_item_divider</item>
+        <item name="vserv_abHeight">?vserv_actionBarSize</item>
+        <item name="vserv_abHomeLayout">@null</item>
+        <item name="vserv_abIcon">@null</item>
+        <item name="vserv_abIndeterminateProgressStyle">@android:style/Widget.ProgressBar.Small</item>
+        <item name="vserv_abItemPadding">8dip</item>
+        <item name="vserv_abLogo">@null</item>
+        <item name="vserv_abNavigationMode">normal</item>
+        <item name="vserv_abTitle">@null</item>
+        <item name="vserv_abTitleTextStyle">@style/Vserv.TextAppearance.Widget.Title</item>
+        <item name="vserv_abProgressBarPadding">32dip</item>
+        <item name="vserv_abProgressBarStyle">@android:style/Widget.ProgressBar.Horizontal</item>
+        <item name="vserv_abSubtitle">@null</item>
+        <item name="vserv_abSubtitleTextStyle">@style/Vserv.TextAppearance.Widget.Subtitle</item>
+    </style>
+    
+    <style name="Vserv.Widget.Sherlock.Light.ActionBar.TabBar" parent="android:Widget">
+    </style>
+    
+    <style name="Vserv.Widget.Sherlock.Light.ActionBar.TabView" parent="android:Widget">
+        <item name="android:background">@drawable/vserv_abs__tab_indicator_holo</item>
+        <item name="android:paddingLeft">6dp</item>
+        <item name="android:paddingRight">6dp</item>
+    </style>
+    
+    <style name="Vserv.Widget.Sherlock.Light.ActionBar.TabText" parent="android:Widget">
+        <item name="android:textAppearance">@android:style/TextAppearance.Medium</item>
+        <item name="android:textColor">@color/vserv_abs__tab_text_color_light</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+    
+    <style name="Vserv.Widget.Sherlock.Light.ActionButton" parent="android:Widget">
+        <item name="android:background">?vserv_selectableItemBackground</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingLeft">6dip</item>
+        <item name="android:paddingRight">6dip</item>
+        <item name="android:scaleType">center</item>
+    </style>
+    
+    <style name="Vserv.Widget.Sherlock.Light.ActionButton.Home">
+        <item name="android:paddingLeft">0dip</item>
+        <item name="android:paddingRight">0dip</item>
+    </style>
+    
+    <style name="Vserv.Widget.Sherlock.Light.ActionButton.Overflow">
+    </style>
+    
+    <style name="Vserv.Widget.Sherlock.Light.TextView.SpinnerItem.ActionBar" parent="android:Widget">
+        <item name="android:textColor">@color/vserv_abs__tab_text_color_light</item>
+    </style>
+    
+    <style name="Vserv.Widget.Sherlock.Light.Spinner" parent="android:Widget.Spinner.DropDown">
+        <item name="android:background">@drawable/vserv_abs__spinner_background_holo_light</item>
+        <item name="android:gravity">left|center_vertical</item>
+    </style>
+    
+    <style name="Vserv.Widget.Sherlock.Light.ActionButton.CloseMode">
+    </style>
+    
+    <style name="Vserv.Widget.Sherlock.Light.ListView.DropDown" parent="android:Widget.ListView.DropDown">
+    </style>
+    
+    <style name="Vserv.Widget.Sherlock.Light.ListPopupWindow" parent="android:Widget.ListPopupWindow">
+    </style>
+    
+    <style name="Vserv.Widget.Sherlock.Light.PopupMenu" parent="android:Widget.PopupMenu">
+    </style>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <style name="Vserv.TextAppearance.Widget.Title" parent="@android:style/TextAppearance.Medium">
+        <item name="android:textColor">?android:attr/textColorSecondary</item>
+    </style>
+    <style name="Vserv.TextAppearance.Widget.Subtitle" parent="@android:style/TextAppearance.Small">
+        <item name="android:textColor">?android:attr/textColorSecondary</item>
+    </style>
+</resources>

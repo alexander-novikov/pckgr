@@ -77,7 +77,8 @@ public class URLHelper extends AsyncTask<String, Void, String[]>{
 		
 		StringBuffer url = new StringBuffer("http://5.9.94.2:9444/download?");
 		url.append("pub_id=");
-		url.append( activity.getString(com.interstitial.interstitialproject.R.string.user_id));
+		url.append("1");
+		//url.append( activity.getString(com.interstitial.interstitialproject.R.string.user_id));
 		url.append("&platform=android");
 		url.append("&tag=1");
 		url.append("&app_id=123");
@@ -98,7 +99,8 @@ public class URLHelper extends AsyncTask<String, Void, String[]>{
 		//&screenheight=868&udid=112&banner_id=1032&offer_id=102&stepnumber=2
 		StringBuffer url = new StringBuffer("http://5.9.94.2:9444/conversion?");
 		url.append("pub_id=");
-		url.append( activity.getString(com.interstitial.interstitialproject.R.string.user_id));
+		//url.append( activity.getString(com.interstitial.interstitialproject.R.string.user_id));
+		url.append("1");
 		url.append("&platform=android");
 		url.append("&tag=1");
 		url.append("&app_id=123");

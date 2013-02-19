@@ -177,6 +177,36 @@ public class JsonHelper {
 		}
 		return isIncent.equals("true");
 	}
+	
+	public static String[] getIncentParams(String json){
+		
+		Object obj;
+		String incentText = "";
+		String packageName = "";
+		try {
+			obj = parser.parse(json);
+			JSONObject jsonObj = (JSONObject) obj;
+			
+			JSONObject extra = (JSONObject) jsonObj.get("internaloptions");
+			incentText = 	((JSONObject) extra).get("incent_validation").toString();
+			JSONArray offers = (JSONArray) ((JSONObject) extra).get("offers");
+			for (Object object : offers) {
+				JSONArray options = (JSONArray) ((JSONObject) object).get("options");
+				for (Object obji : options) {
+					packageName = 	((JSONObject) obji).get("packagename").toString();
+				}
+				
+			}
+			
+		} catch (ParseException e) {
+			e.printStackTrace();
+		}
+		
+		String[] params = {incentText, packageName};
+		return params;
+		
+	}
+	
 
 	public static boolean checkLastStep(String json) {
 		Object obj;
