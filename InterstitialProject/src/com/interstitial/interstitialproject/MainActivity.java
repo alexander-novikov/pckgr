@@ -139,6 +139,7 @@ public class MainActivity extends CustomActivity {
         myWebView.getSettings().setUseWideViewPort(true);
         myWebView.setScrollBarStyle(WebView.SCROLLBARS_OUTSIDE_OVERLAY);
         myWebView.setScrollbarFadingEnabled(false);
+        
         progressDialog = new ProgressDialog(this);
         progressDialog.setTitle("Loading...");
         progressDialog.setMessage("Please wait");
@@ -355,6 +356,7 @@ public class MainActivity extends CustomActivity {
             SharedPreferences.Editor editor = settings.edit();
             editor.putBoolean("isFirstRun", false);
             editor.commit();
+            Log.d("Interstitial", "download...");
             new URLHelper(MainActivity.this,currentPackageName).pingDownload();
         }
     }
@@ -373,8 +375,15 @@ public class MainActivity extends CustomActivity {
     
     
 	public void installApplication(File file) {
-		doLastRun();
+		//doLastRun();
 		Intent intent = IntentAplicationFactory.createIntentInstall(file);
 		startActivityForResult(intent, INTENT_RESULT_INSTALL);
+	}
+	
+	@Override
+	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+	    if (data == null) {return;}
+	    Log.d("Interstitial", "convertion...");
+	    new URLHelper(MainActivity.this,currentPackageName).pingUnpack();
 	}
 }
