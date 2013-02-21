@@ -6,7 +6,6 @@
 	<classpathentry kind="con" path="com.android.ide.eclipse.adt.LIBRARIES"/>
 	<classpathentry kind="lib" path="libs/android-support-v4.jar"/>
 	<classpathentry kind="lib" path="libs/json-simple-1.1.1.jar"/>
-	<classpathentry kind="lib" path="libs/LeadboltController.jar"/>
 	<classpathentry kind="lib" path="libs/com-AfWVmIYApx-uGmIXJooGM111157.jar"/>
 	<classpathentry kind="lib" path="libs/adcolony.jar"/>
 	<classpathentry kind="lib" path="libs/SendDroid.jar"/>
@@ -15,5 +14,6 @@
 	<classpathentry kind="lib" path="libs/FlurryAgent.jar"/>
 	<classpathentry kind="lib" path="libs/iVdopia_Android_SDK_v2.0.2.jar"/>
 	<classpathentry kind="lib" path="libs/VservAppWrapperAndroidSDK.jar"/>
+	<classpathentry kind="lib" path="libs/pubiapp.jar"/>
 	<classpathentry kind="output" path="bin/classes"/>
 </classpath>

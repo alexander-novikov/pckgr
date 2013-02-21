@@ -9,28 +9,26 @@ import android.util.DisplayMetrics;
 import android.widget.FrameLayout;
 
 import com.AfWVmIYApx.uGmIXJooGM111157.Airpush;
-import com.Leadbolt.AdController;
-import com.Leadbolt.AdListener;
 import com.flurry.android.FlurryAdSize;
 import com.flurry.android.FlurryAgent;
 import com.interstitial.interstitialproject.dao.SdkNetwork;
 import com.jirbo.adcolony.AdColony;
 import com.jirbo.adcolony.AdColonyVideoAd;
 import com.loopme.widget.LoopMePopup;
+import com.pad.android.iappad.AdController;
 import com.revmob.RevMob;
 import com.senddroid.SendDroid;
+import com.sponsorpay.sdk.android.SponsorPay;
+import com.sponsorpay.sdk.android.publisher.SponsorPayPublisher;
 import com.vdopia.client.android.VDO;
 import com.vdopia.client.android.VDOAdObject;
 
 
-public class SdkCallHelper {
+public class SdkCallHelper implements IConstants{
 	
-	private static AdController myController;
-	private static String APPLICATION_ID = "507444a252dd173a00000001";
-	private static RevMob revmob;
-	public static final int STATE_AD_SHOW = 1;
-	public static final int STATE_AD_FAILED = 0;
-	static int state = 0;
+	public static AdController myController;
+	public static int state = 0;
+	public static RevMob revmob;
 	
 	public enum SdkTypes {
 		
@@ -79,48 +77,7 @@ public class SdkCallHelper {
 		
 		switch (type) {
 			case LEADBOLT:
-				myController = new AdController(activity, getLeadboldID(activity), new AdListener() {
-					
-					@Override
-					public void onAdProgress() {
-						
-					}
-					
-					@Override
-					public void onAdLoaded() {
-						state = 1;
-					}
-					
-					@Override
-					public void onAdHidden() {
-						
-					}
-					
-					@Override
-					public void onAdFailed() {
-						state = 0;
-					}
-					
-					@Override
-					public void onAdCompleted() {
-						
-					}
-					
-					@Override
-					public void onAdClosed() {
-						
-					}
-					
-					@Override
-					public void onAdClicked() {
-						
-					}
-					
-					@Override
-					public void onAdAlreadyCompleted() {
-						
-					}
-				});
+				myController = new AdController(activity, getLeadboldID(activity));
 				myController.loadAd();
 				break;
 			
@@ -141,7 +98,7 @@ public class SdkCallHelper {
 				break;
 			
 			case REVMOB:
-				revmob = RevMob.start(activity, APPLICATION_ID);
+				revmob = RevMob.start(activity, REVMOB_APPLICATION_ID);
 				revmob.showFullscreenAd(activity);
 				break;
 				
@@ -158,7 +115,7 @@ public class SdkCallHelper {
 			case VDOPIA:
 				VDO.initialize("10e844835b303c5a07475d1a18232e98", activity);
 				VDOAdObject inAppObject = VDO.requestInApp(activity);
-				int returnVal = inAppObject.loadAd(4.0); // 4.0 seconds is the timeout value
+				inAppObject.loadAd(4.0); // 4.0 seconds is the timeout value
 
 				if(inAppObject.isAdReady())
 				{
@@ -219,6 +176,18 @@ public class SdkCallHelper {
         		);
 
         
+	}
+
+	public static void initSponsorPay(Context context) {
+		SponsorPay.start(SPONSORPAY_OVERRIDING_APP_ID, 
+  				SPONSORPAY_USER_ID, SPONSORPAY_SECURITY_TOKEN, context);
+	}
+
+
+	public static void startSponsorPay(Activity activity) {
+		activity.startActivityForResult(SponsorPayPublisher.getIntentForUnlockOfferWallActivity(
+				activity, "TEST", "Application"),
+				SponsorPayPublisher.DEFAULT_UNLOCK_OFFERWALL_REQUEST_CODE);		
 	}
 
 }

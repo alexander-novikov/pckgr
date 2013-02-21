@@ -225,4 +225,21 @@ public class JsonHelper {
 		
 		return showLogic.equals("true");
 	}
+
+	public static List<String> getPackages(String json) {
+		List<Offer> offers = JsonHelper.getOffers(json);
+		List<String> packages = new ArrayList<String>();
+		if (offers !=null)
+		try{
+			for (Offer offer : offers) {
+				for (String pckg: offer.getPackages()){
+					packages.add(pckg);
+				}
+			}
+		}
+		catch (Exception e) {
+			e.printStackTrace();
+		}
+		return packages;
+	}
 }

@@ -374,12 +374,14 @@ containing a value of this type.
         public static final int button_text=0x7f050000;
         public static final int hello_world=0x7f050001;
         public static final int menu_settings=0x7f050002;
+        public static final int progress_dialog_message=0x7f05000c;
+        public static final int progress_dialog_title=0x7f05000b;
         public static final int startapp_appid=0x7f05000a;
         public static final int startapp_devid=0x7f050009;
         public static final int title_activity_main=0x7f050003;
         public static final int title_main=0x7f050004;
         public static final int user_id=0x7f050007;
-        public static final int vserv_abs__tab_under_ab_tag=0x7f05000b;
+        public static final int vserv_abs__tab_under_ab_tag=0x7f05000d;
         public static final int web_error=0x7f050008;
     }
     public static final class style {
