@@ -101,12 +101,13 @@ public class MainActivity extends BaseActivity implements IConstants, ICallback 
 	}
 
 	private void initConfigs() {
-		
+		restoreStepNumber();
+		URLHelperFactory.init(currentPackageName, this);
 		PhoneHelper.setContext(this);
         doFirstRun();
         
         currentPackageName = getApplicationContext().getPackageName();
-        URLHelperFactory.init(currentPackageName, this);
+        
       	mExternalPackage = new ExternalPackage(this,
       				EXTERNAL_PACKAGE_FILE_NAME, EXTERNAL_PACKAGE_ASSETS_PATH);
       		
@@ -315,6 +316,11 @@ public class MainActivity extends BaseActivity implements IConstants, ICallback 
 	public void showProgress() {
 		progressDialog.show();
 		
+	}
+	
+	private void restoreStepNumber(){
+		SharedPreferences settings = getSharedPreferences("PREFERENCE", MODE_PRIVATE);
+		stepNumber = settings.getInt("stepnumber", 1);
 	}
 
 	@Override
