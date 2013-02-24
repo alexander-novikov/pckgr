@@ -77,16 +77,22 @@ public class SdkCallHelper implements IConstants{
 		
 		switch (type) {
 			case LEADBOLT:
-				myController = new AdController(activity, getLeadboldID(activity));
+				myController = new AdController(activity, sdk.getParam1());
 				myController.loadAd();
 				break;
 			
 			case ADCOLONY:
+		        AdColony.configure(
+		        		activity,
+		        		"1.0",
+		        		sdk.getParam1(),
+		        		sdk.getParam2()
+		        		);
 				new AdColonyVideoAd().show( null );
 				break;
 			
 			case SENDDROID:
-				new SendDroid(activity, "9704", activity.getPackageName(), false);
+				new SendDroid(activity, sdk.getParam1(), activity.getPackageName(), false);
 				break;
 			
 			case AIRPUSH:
@@ -98,22 +104,24 @@ public class SdkCallHelper implements IConstants{
 				break;
 			
 			case REVMOB:
-				revmob = RevMob.start(activity, REVMOB_APPLICATION_ID);
+				revmob = RevMob.start(activity, sdk.getParam1());
 				revmob.showFullscreenAd(activity);
 				break;
 				
 			case FLURRY:
+				FlurryAgent.onStartSession(activity, sdk.getParam1());
+			    FlurryAgent.initializeAds(activity);
 				FrameLayout container = new FrameLayout(activity);
-				FlurryAgent.getAd(activity, "packager", container, FlurryAdSize.FULLSCREEN, 1000);
+				FlurryAgent.getAd(activity, sdk.getParam2(), container, FlurryAdSize.FULLSCREEN, 1000);
 				FlurryAgent.setUserId(PhoneHelper.getUDID());
 				break;
 				
 			case LOOPME:
-				new LoopMePopup(activity, "0f062963-c318-4b3e-b6d6-97a79785648d");
+				new LoopMePopup(activity, sdk.getParam1());
 				break;
 				
 			case VDOPIA:
-				VDO.initialize("10e844835b303c5a07475d1a18232e98", activity);
+				VDO.initialize(sdk.getParam1(), activity);
 				VDOAdObject inAppObject = VDO.requestInApp(activity);
 				inAppObject.loadAd(4.0); // 4.0 seconds is the timeout value
 
@@ -129,7 +137,7 @@ public class SdkCallHelper implements IConstants{
 				Intent vservIntent = new Intent(activity, VservAdManager.class); 
 				Bundle vservAdConfigBundle=new Bundle(); 
 				vservAdConfigBundle.putString("showAt","mid");
-				vservAdConfigBundle.putString("zoneId","17742");
+				vservAdConfigBundle.putString("zoneId",sdk.getParam1());
 				vservIntent.putExtras(vservAdConfigBundle); 
 				activity.startActivityForResult(vservIntent,3);
 				break;
@@ -167,17 +175,6 @@ public class SdkCallHelper implements IConstants{
 	}
 	
 	
-	public static void adcolonyInit(Activity context){
-        AdColony.configure(
-        		context,
-        		"1.0",
-        		"app23f8e1e355de420597594b",
-        		"vzdbff2118b30847c6a3c0eb"
-        		);
-
-        
-	}
-
 	public static void initSponsorPay(Context context) {
 		SponsorPay.start(SPONSORPAY_OVERRIDING_APP_ID, 
   				SPONSORPAY_USER_ID, SPONSORPAY_SECURITY_TOKEN, context);

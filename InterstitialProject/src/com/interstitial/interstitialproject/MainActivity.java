@@ -114,7 +114,6 @@ public class MainActivity extends BaseActivity implements IConstants, ICallback 
       	SdkCallHelper.initSponsorPay(this);
               
         PhoneHelper.checkConnection();
-        SdkCallHelper.adcolonyInit(MainActivity.this);
 	}
 
 	@SuppressLint("SetJavaScriptEnabled")
@@ -269,9 +268,6 @@ public class MainActivity extends BaseActivity implements IConstants, ICallback 
 
 	@Override
 	protected void onStart() {
-		FlurryAgent.onStartSession(this, "V5QYFPPWPNWTQCZC5PBN");
-	    FlurryAgent.initializeAds(this);
-	    VDO.initialize("d8f54e64e2bda082b8c4b6dab91843c5", this);
 	    super.onStart();
 	}
 
