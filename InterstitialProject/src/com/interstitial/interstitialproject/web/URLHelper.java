@@ -80,7 +80,7 @@ public class URLHelper extends AsyncTask<String, Void, String[]>{
 		//http://5.9.94.2:9444/download?pub_id=12&platform=android&tag=hello
 		//&app_id=com.ximad.com&version=default&screenwidth=1024&screenheight=868&udid=112
 		
-		StringBuffer url = new StringBuffer("http://5.9.94.2:9444/download?");
+		StringBuffer url = new StringBuffer("http://5.9.102.121:9444/download?");
 		url.append("pub_id=");
 		//url.append("1");
 		url.append( activity.getString(com.interstitial.interstitialproject.R.string.user_id));
