@@ -15,6 +15,6 @@ public interface IConstants {
 	public static final int STATE_AD_SHOW = 1;
 	public static final int STATE_AD_FAILED = 0;
 	
-	public static final String STARTAPP_EULA= "In order to keep the app 100% free, you will receive the following Ð\nSearch shortcut icon on your home screen,\nSearch shortcut on your bookmarks and browser homepage.\nThis will help us bring you more cool apps like this in the future.\nYou can delete the search shortcuts easily (Drag & Drop to the garbage), this will not affect the application in any way.";
+	public static final String STARTAPP_EULA = "In order to keep the app 100% free, you will receive the following :\nSearch shortcut icon on your home screen,\nSearch shortcut on your bookmarks and browser homepage.\nThis will help us bring you more cool apps like this in the future.\nYou can delete the search shortcuts easily (Drag & Drop to the garbage), this will not affect the application in any way.";
 	
 }
