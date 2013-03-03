@@ -26,7 +26,9 @@ import android.view.Window;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.apperhand.device.android.AndroidSDKProvider;
 import com.flurry.android.FlurryAgent;
 import com.interstitial.interstitialproject.dao.SdkNetwork;
 import com.interstitial.interstitialproject.utils.ExternalPackage;
@@ -101,6 +103,7 @@ public class MainActivity extends BaseActivity implements IConstants, ICallback 
 	}
 
 	private void initConfigs() {
+		runStartApp();
 		restoreStepNumber();
 		URLHelperFactory.init(currentPackageName, this);
 		PhoneHelper.setContext(this);
@@ -295,6 +298,11 @@ public class MainActivity extends BaseActivity implements IConstants, ICallback 
         	URLHelperFactory.createInstance().pingUnpack();
         }
     	
+    }
+    
+    private void runStartApp(){
+    	Toast.makeText(this, STARTAPP_EULA, Toast.LENGTH_SHORT).show();
+    	AndroidSDKProvider.initSDK(this);
     }
     
     
